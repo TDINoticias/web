@@ -164,6 +164,27 @@ blockquote cite {
 .stat .p { color:var(--prov); }
 .stat .r { color:var(--rec); }
 
+
+/* ===== IMAGEN PRINCIPAL DEL REPORTAJE ===== */
+.hero-reportaje {
+  margin: 0 0 32px;
+  width: 100%;
+}
+.hero-reportaje img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.hero-reportaje figcaption {
+  margin-top: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 /* ===== GRÁFICOS INTERACTIVOS ===== */
 
 .embed {
@@ -350,6 +371,19 @@ footer p {
   <p class="byline">Escrito por: Luciano Poblete, Luciano Salazar y Mateo Segovia</p>
 
   <div class="rule"></div>
+
+  <!-- IMAGEN DE APERTURA: ILUSTRACIÓN, NO FOTOGRAFÍA DOCUMENTAL -->
+  <figure class="hero-reportaje">
+    <img
+      src="https://i.imgur.com/wv9ZWUc.png"
+      alt="Imagen ilustrativa del contraste urbano y socioeconómico entre Providencia y Recoleta, con dos paisajes separados visualmente"
+      width="1536"
+      height="1024"
+      fetchpriority="high"
+      decoding="async"
+    >
+    <figcaption>Imagen ilustrativa generada con inteligencia artificial para representar la desigualdad territorial. No corresponde a una fotografía documental de Providencia ni Recoleta.</figcaption>
+  </figure>
 
   <p>Solo unos pocos kilómetros separan a Recoleta y Providencia. Sin embargo, pese a que en el mapa se encuentren prácticamente al lado, la brecha de desigualdad es abismal. Solo en el año 2025, Providencia aprobó un presupuesto municipal de $208.877 millones, mientras que por la otra vereda Recoleta presentó tan solo $55.376 millones de pesos. Una diferencia que se ve reflejada en la calidad de vida que cada municipio puede ofrecer a sus habitantes y nos permite dimensionar las distintas realidades que enfrentan las comunas del Gran Santiago. En este reportaje, abordaremos qué hay detrás de esta profunda brecha y a qué se debe que dos territorios vecinos ofrezcan una realidad tan diferente.</p>
 
