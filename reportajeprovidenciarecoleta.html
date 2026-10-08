@@ -19,9 +19,13 @@
   --transition:all .3s ease;
 }
 
-* { box-sizing:border-box; }
+* {
+  box-sizing:border-box;
+}
 
-html { scroll-behavior:smooth; }
+html {
+  scroll-behavior:smooth;
+}
 
 body {
   font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
@@ -164,8 +168,13 @@ blockquote cite {
   line-height:1.4;
 }
 
-.stat .p { color:var(--prov); }
-.stat .r { color:var(--rec); }
+.stat .p {
+  color:var(--prov);
+}
+
+.stat .r {
+  color:var(--rec);
+}
 
 /* ===== IMAGEN PRINCIPAL ===== */
 
@@ -197,6 +206,7 @@ blockquote cite {
   border-top:2px solid var(--ink);
   border-bottom:1px solid var(--line);
   padding:16px 0 12px;
+  min-width:0;
 }
 
 .embed-title {
@@ -207,13 +217,52 @@ blockquote cite {
   line-height:1.3;
 }
 
+/*
+  Los gráficos comienzan con una altura estimada.
+
+  Cuando Google Apps Script comunica su altura
+  real mediante postMessage, JavaScript actualiza
+  directamente la altura del iframe.
+*/
+
 .embed iframe {
   display:block;
   width:100%;
-  height:var(--h,760px);
+  height:var(--h,700px);
   border:0;
-  background:#f7f4ed;
+  background:#f8f5ef;
   border-radius:8px;
+  overflow:hidden;
+}
+
+/* Alturas de respaldo */
+
+.embed[data-k="timeline"] {
+  --h:540px;
+}
+
+.embed[data-k="ingresos"] {
+  --h:900px;
+}
+
+.embed[data-k="inversion"] {
+  --h:860px;
+}
+
+.embed[data-k="distribucion"] {
+  --h:900px;
+}
+
+.embed[data-k="pictogramas"] {
+  --h:900px;
+}
+
+.embed[data-k="radar"] {
+  --h:850px;
+}
+
+.embed[data-k="anillos"] {
+  --h:600px;
 }
 
 .embed figcaption {
@@ -223,21 +272,15 @@ blockquote cite {
   line-height:1.4;
 }
 
-/* OCULTAR PIE INFERIOR DE PICTOGRAMAS */
+/* Sin pie duplicado en pictogramas */
 
 .embed[data-k="pictogramas"] > figcaption {
-  display:none !important;
+  display:none!important;
 }
 
-.embed[data-k=timeline] { --h:640px; }
-.embed[data-k=ingresos] { --h:900px; }
-.embed[data-k=inversion] { --h:860px; }
-.embed[data-k=distribucion] { --h:780px; }
-.embed[data-k=pictogramas] { --h:850px; }
-.embed[data-k=radar] { --h:790px; }
-.embed[data-k=anillos] { --h:490px; }
-
-.embed .fallback { display:none; }
+.embed .fallback {
+  display:none;
+}
 
 /* ===== HEADER ===== */
 
@@ -283,7 +326,9 @@ nav a {
   transition:var(--transition);
 }
 
-nav a:hover { color:var(--accent); }
+nav a:hover {
+  color:var(--accent);
+}
 
 /* ===== FOOTER ===== */
 
@@ -325,13 +370,42 @@ footer p {
     padding:22px 16px;
   }
 
-  .embed[data-k=timeline] { --h:560px; }
-  .embed[data-k=ingresos] { --h:1050px; }
-  .embed[data-k=inversion] { --h:980px; }
-  .embed[data-k=distribucion] { --h:900px; }
-  .embed[data-k=pictogramas] { --h:900px; }
-  .embed[data-k=radar] { --h:830px; }
-  .embed[data-k=anillos] { --h:490px; }
+  .embed {
+    margin:30px 0;
+  }
+
+  /*
+    Alturas iniciales para celulares.
+    El sistema automático podrá reemplazarlas.
+  */
+
+  .embed[data-k="timeline"] {
+    --h:550px;
+  }
+
+  .embed[data-k="ingresos"] {
+    --h:1100px;
+  }
+
+  .embed[data-k="inversion"] {
+    --h:1000px;
+  }
+
+  .embed[data-k="distribucion"] {
+    --h:1000px;
+  }
+
+  .embed[data-k="pictogramas"] {
+    --h:1000px;
+  }
+
+  .embed[data-k="radar"] {
+    --h:950px;
+  }
+
+  .embed[data-k="anillos"] {
+    --h:700px;
+  }
 }
 
 @media(min-width:1200px) {
@@ -341,8 +415,13 @@ footer p {
 }
 
 @media(prefers-reduced-motion:reduce) {
-  html { scroll-behavior:auto; }
-  * { transition:none!important; }
+  html {
+    scroll-behavior:auto;
+  }
+
+  * {
+    transition:none!important;
+  }
 }
 </style>
 </head>
@@ -363,7 +442,7 @@ footer p {
       <li><a href="index.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="#">Más Noticias</a></li>
-      <li><a href="reportaje.html">Reportaje Multimedia</a></li>
+      <li><a href="reportajeprovidenciarecoleta.html">Reportaje Multimedia</a></li>
       <li><a href="https://sites.google.com/view/tdinoticias/juega-aqu%C3%AD">Juega Aquí</a></li>
     </ul>
   </nav>
@@ -381,7 +460,8 @@ footer p {
 
   <div class="rule"></div>
 
-  <!-- IMAGEN DE APERTURA -->
+  <!-- IMAGEN PRINCIPAL -->
+
   <figure class="hero-reportaje">
     <img
       src="https://i.imgur.com/wv9ZWUc.png"
@@ -390,6 +470,7 @@ footer p {
       height="1024"
       fetchpriority="high"
       decoding="async">
+
     <figcaption>Imagen ilustrativa generada con inteligencia artificial para representar la desigualdad territorial. No corresponde a una fotografía documental de Providencia ni Recoleta.</figcaption>
   </figure>
 
@@ -607,9 +688,7 @@ footer p {
     data-k="pictogramas"
     id="g-pictogramas">
 
-    <h3 class="embed-title">
-      La brecha puertas adentro: vivienda y pobreza
-    </h3>
+    <h3 class="embed-title">La brecha puertas adentro: vivienda y pobreza</h3>
 
     <iframe
       data-embed="pictogramas"
@@ -618,9 +697,6 @@ footer p {
       loading="lazy"
       allowfullscreen>
     </iframe>
-
-    <!-- SIN TEXTO INFERIOR -->
-
   </figure>
 
   <p>Sin embargo, su nueva vida no está exenta de dificultades. Pese a las ventajas que le entrega la comuna, enfrenta cada día el alto costo de vivir en ella en comparación con el territorio hermano.</p>
@@ -680,34 +756,92 @@ footer p {
 
 <script>
 /*
- Ajuste automático de altura de los gráficos.
- Si una aplicación de Apps Script envía su
- altura mediante postMessage, se utiliza
- esa medida. De lo contrario se aplica CSS.
-*/
+ * AJUSTE AUTOMÁTICO DE ALTURA
+ *
+ * Recibe mensajes de las aplicaciones
+ * Google Apps Script incrustadas.
+ *
+ * Los iframes se expanden o contraen
+ * según la altura enviada por cada gráfico.
+ */
 
-window.addEventListener('message', function(e) {
+const limitesGraficos = {
+  timeline:[200,5000],
+  ingresos:[200,6000],
+  inversion:[200,6000],
+  distribucion:[200,6000],
+  pictogramas:[200,6000],
+  radar:[200,6000],
+  anillos:[200,6000]
+};
+
+window.addEventListener("message",function(event) {
+
+  let hostname;
+
   try {
-    if (!/(^|\.)googleusercontent\.com$|^script\.google\.com$/.test(
-      new URL(e.origin).hostname
-    )) return;
-  } catch (_) {
+    hostname = new URL(event.origin).hostname;
+  } catch(error) {
     return;
   }
 
-  var d=e.data;
+  const origenPermitido =
+    hostname === "script.google.com" ||
+    hostname === "googleusercontent.com" ||
+    hostname.endsWith(".googleusercontent.com");
 
-  if (!d || !d.tdiEmbed || !d.key) return;
+  if(!origenPermitido) {
+    return;
+  }
 
-  var f=document.querySelector(
-    'iframe[data-embed="' + d.key + '"]'
+  const datos = event.data;
+
+  if(
+    !datos ||
+    datos.tdiEmbed !== true ||
+    typeof datos.key !== "string"
+  ) {
+    return;
+  }
+
+  const limites = limitesGraficos[datos.key];
+
+  if(!limites) {
+    return;
+  }
+
+  const altura = Math.ceil(Number(datos.h));
+
+  if(
+    !Number.isFinite(altura) ||
+    altura < limites[0] ||
+    altura > limites[1]
+  ) {
+    return;
+  }
+
+  const iframe = document.querySelector(
+    'iframe[data-embed="' + datos.key + '"]'
   );
 
-  var h=Math.ceil(Number(d.h));
-
-  if (f && h>200 && h<6000) {
-    f.style.height=h+'px';
+  if(!iframe) {
+    return;
   }
+
+  /*
+   * Comprobar que el mensaje procede
+   * de la ventana incrustada o, cuando
+   * Google utiliza una ventana intermedia,
+   * de un origen autorizado.
+   */
+
+  const alturaActual =
+    iframe.getBoundingClientRect().height;
+
+  if(Math.abs(alturaActual-altura)>3) {
+    iframe.style.height=altura+"px";
+  }
+
 });
 </script>
 
