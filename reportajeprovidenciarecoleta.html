@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -134,7 +135,9 @@ blockquote cite {
   text-decoration:none;
 }
 
-.pointer:hover { background:#e2f0fa; }
+.pointer:hover {
+  background:#e2f0fa;
+}
 
 .stats {
   display:grid;
@@ -164,25 +167,27 @@ blockquote cite {
 .stat .p { color:var(--prov); }
 .stat .r { color:var(--rec); }
 
+/* ===== IMAGEN PRINCIPAL ===== */
 
-/* ===== IMAGEN PRINCIPAL DEL REPORTAJE ===== */
 .hero-reportaje {
-  margin: 0 0 32px;
-  width: 100%;
+  margin:0 0 32px;
+  width:100%;
 }
+
 .hero-reportaje img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  border-radius: 4px;
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:3 / 2;
+  object-fit:cover;
+  border-radius:4px;
 }
+
 .hero-reportaje figcaption {
-  margin-top: 9px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--muted);
+  margin-top:9px;
+  font-size:12px;
+  line-height:1.5;
+  color:var(--muted);
 }
 
 /* ===== GRÁFICOS INTERACTIVOS ===== */
@@ -218,14 +223,18 @@ blockquote cite {
   line-height:1.4;
 }
 
+/* OCULTAR PIE INFERIOR DE PICTOGRAMAS */
+
+.embed[data-k="pictogramas"] > figcaption {
+  display:none !important;
+}
+
 .embed[data-k=timeline] { --h:640px; }
 .embed[data-k=ingresos] { --h:900px; }
 .embed[data-k=inversion] { --h:860px; }
 .embed[data-k=distribucion] { --h:780px; }
 .embed[data-k=pictogramas] { --h:850px; }
 .embed[data-k=radar] { --h:790px; }
-
-/* ALTURA CORREGIDA DEL GRÁFICO DE SALUD */
 .embed[data-k=anillos] { --h:490px; }
 
 .embed .fallback { display:none; }
@@ -320,10 +329,8 @@ footer p {
   .embed[data-k=ingresos] { --h:1050px; }
   .embed[data-k=inversion] { --h:980px; }
   .embed[data-k=distribucion] { --h:900px; }
-  .embed[data-k=pictogramas] { --h:820px; }
+  .embed[data-k=pictogramas] { --h:900px; }
   .embed[data-k=radar] { --h:830px; }
-
-  /* ALTURA CORREGIDA EN MÓVILES */
   .embed[data-k=anillos] { --h:490px; }
 }
 
@@ -345,7 +352,9 @@ footer p {
 <header>
   <a href="index.html" class="logo-link">
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/pabloalarcona5-lgtm/tdi_noticias_repository/refs/heads/main/000-CONTRASTE-VECTOR.svg" alt="TDI Noticias">
+      <img
+        src="https://raw.githubusercontent.com/pabloalarcona5-lgtm/tdi_noticias_repository/refs/heads/main/000-CONTRASTE-VECTOR.svg"
+        alt="TDI Noticias">
     </div>
   </a>
 
@@ -372,16 +381,15 @@ footer p {
 
   <div class="rule"></div>
 
-  <!-- IMAGEN DE APERTURA: ILUSTRACIÓN, NO FOTOGRAFÍA DOCUMENTAL -->
+  <!-- IMAGEN DE APERTURA -->
   <figure class="hero-reportaje">
     <img
       src="https://i.imgur.com/wv9ZWUc.png"
-      alt="Imagen ilustrativa del contraste urbano y socioeconómico entre Providencia y Recoleta, con dos paisajes separados visualmente"
+      alt="Imagen ilustrativa del contraste urbano y socioeconómico entre Providencia y Recoleta"
       width="1536"
       height="1024"
       fetchpriority="high"
-      decoding="async"
-    >
+      decoding="async">
     <figcaption>Imagen ilustrativa generada con inteligencia artificial para representar la desigualdad territorial. No corresponde a una fotografía documental de Providencia ni Recoleta.</figcaption>
   </figure>
 
@@ -416,7 +424,7 @@ footer p {
     <cite>Sebastián La Rivera, sociólogo de la Universidad de Santiago de Chile</cite>
   </blockquote>
 
-  <!-- GRÁFICOS 2 Y 3: INGRESOS Y RADIOGRAFÍA FINANCIERA -->
+  <!-- GRÁFICOS 2 Y 3: INGRESOS -->
 
   <figure class="embed" data-k="ingresos" id="g-ingresos">
     <h3 class="embed-title">Ingresos propios vs. Fondo Común Municipal · Radiografía financiera estructural</h3>
@@ -487,7 +495,7 @@ footer p {
     <cite>Camila Henríquez, concejala de Recoleta</cite>
   </blockquote>
 
-  <!-- GRÁFICO 4: INVERSIÓN MUNICIPAL POR HABITANTE -->
+  <!-- GRÁFICO 4: INVERSIÓN MUNICIPAL -->
 
   <figure class="embed" data-k="inversion">
     <h3 class="embed-title">Inversión municipal por habitante, 2025</h3>
@@ -503,7 +511,7 @@ footer p {
     <figcaption>Pasa el mouse o toca las monedas para comparar obras públicas y servicios de aseo por habitante.</figcaption>
   </figure>
 
-  <!-- GRÁFICO 5: MAPA DE DISTRIBUCIÓN DEL GASTO -->
+  <!-- GRÁFICO 5: DISTRIBUCIÓN DEL GASTO -->
 
   <figure class="embed" data-k="distribucion">
     <h3 class="embed-title">Mapa interactivo: distribución del gasto público, 2025</h3>
@@ -537,7 +545,7 @@ footer p {
 
   <p>Esta diferencia se puede visualizar en la dependencia que tiene cada municipio del financiamiento estatal. Según datos del Sistema Nacional de Información Municipal (SINIM), durante 2025 el aporte que recibió Recoleta por parte del Estado en el área de salud representó el 81,87% de los ingresos del sector, mientras que Providencia recibió el 50,38%. En palabras simples, Recoleta casi no aportó con recursos propios de la comuna hacia el área de salud; más bien, la gran mayoría de los ingresos en esta materia fue provista por el Estado. Providencia, en cambio, cuenta con una mayor participación de otras fuentes de ingresos y no depende solo del aparato estatal.</p>
 
-  <!-- GRÁFICO 8: SALUD PÚBLICA Y DEPENDENCIA ESTATAL -->
+  <!-- GRÁFICO 8: SALUD -->
 
   <figure class="embed" data-k="anillos" id="g-anillos">
     <h3 class="embed-title">La salud pública y la dependencia del Estado</h3>
@@ -564,7 +572,7 @@ footer p {
 
   <p>Las diferencias aparecen de forma más drástica al observar los resultados del SIMCE 2025, que mide el aprendizaje de los estudiantes. En cuarto básico, Providencia obtuvo un promedio de 298 puntos en Lectura y 287 en Matemáticas, mientras que Recoleta alcanzó 270 y 253 puntos. En segundo medio la diferencia fue aún mayor: Providencia registró 277 puntos en Lectura y 302 en Matemática, frente a 247 y 248 puntos en Recoleta.</p>
 
-  <!-- GRÁFICO 7: RADAR SIMCE -->
+  <!-- GRÁFICO 7: SIMCE -->
 
   <figure class="embed" data-k="radar" id="g-radar">
     <h3 class="embed-title">El termómetro de las oportunidades: resultados SIMCE</h3>
@@ -592,10 +600,16 @@ footer p {
 
   <p>Al tener un mejor salario, José logró arrendar un pequeño departamento en Providencia. Para él, este cambio fue inmediato; destacó el silencio, la limpieza frecuente de las calles y, por sobre todo, la seguridad que le otorgaba la comuna. Este cambio se puede visualizar en la encuesta CASEN 2024, que situó el nivel de pobreza de las comunas de Santiago: la pobreza por ingresos en Providencia alcanzó tan solo un 1,2%, mientras que la de Recoleta llegó a un 14,5%.</p>
 
-  <!-- GRÁFICO 6: PICTOGRAMAS DE CALIDAD DE VIDA -->
+  <!-- GRÁFICO 6: PICTOGRAMAS -->
 
-  <figure class="embed" data-k="pictogramas" id="g-pictogramas">
-    <h3 class="embed-title">La brecha puertas adentro: vivienda y pobreza</h3>
+  <figure
+    class="embed"
+    data-k="pictogramas"
+    id="g-pictogramas">
+
+    <h3 class="embed-title">
+      La brecha puertas adentro: vivienda y pobreza
+    </h3>
 
     <iframe
       data-embed="pictogramas"
@@ -604,6 +618,9 @@ footer p {
       loading="lazy"
       allowfullscreen>
     </iframe>
+
+    <!-- SIN TEXTO INFERIOR -->
+
   </figure>
 
   <p>Sin embargo, su nueva vida no está exenta de dificultades. Pese a las ventajas que le entrega la comuna, enfrenta cada día el alto costo de vivir en ella en comparación con el territorio hermano.</p>
@@ -670,7 +687,6 @@ footer p {
 */
 
 window.addEventListener('message', function(e) {
-
   try {
     if (!/(^|\.)googleusercontent\.com$|^script\.google\.com$/.test(
       new URL(e.origin).hostname
@@ -679,20 +695,19 @@ window.addEventListener('message', function(e) {
     return;
   }
 
-  var d = e.data;
+  var d=e.data;
 
   if (!d || !d.tdiEmbed || !d.key) return;
 
-  var f = document.querySelector(
+  var f=document.querySelector(
     'iframe[data-embed="' + d.key + '"]'
   );
 
-  var h = Math.ceil(Number(d.h));
+  var h=Math.ceil(Number(d.h));
 
-  if (f && h > 200 && h < 6000) {
-    f.style.height = h + 'px';
+  if (f && h>200 && h<6000) {
+    f.style.height=h+'px';
   }
-
 });
 </script>
 
