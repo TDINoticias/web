@@ -526,16 +526,13 @@ footer {
 
 /* ========= EXPERIENCIA MULTIMEDIA ========= */
 .reading-progress{position:fixed;left:0;top:0;height:4px;width:0;background:#fff;z-index:1300;box-shadow:0 0 0 1px rgba(192,17,19,.2)}
-.feature-hero{min-height:calc(88svh - 130px);position:relative;isolation:isolate;color:#fff;display:grid;align-items:end;overflow:hidden;background:#101820}
-.feature-hero-media{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:1fr 1fr}
-.feature-hero-media img{width:100%;height:100%;object-fit:cover}.feature-hero-media img:first-child{object-position:58% center}
-.feature-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,15,22,.94),rgba(7,15,22,.69) 54%,rgba(7,15,22,.2)),linear-gradient(0deg,rgba(7,15,22,.72),transparent 65%)}
-.feature-inner,.feature-wide{width:min(1180px,calc(100% - 40px));margin-inline:auto}.feature-inner{padding:clamp(38px,6vw,82px) 0 30px}
-.feature-eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#ffd2d3;margin-bottom:16px}
+.feature-hero{color:#16191d;background:#fff}
+.feature-inner,.feature-wide{width:min(1180px,calc(100% - 40px));margin-inline:auto}.feature-inner{padding:26px 0 30px}
+.feature-eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#c01113;margin-bottom:14px}
 .feature-hero h1{font-size:clamp(40px,5.5vw,72px);line-height:.98;letter-spacing:0;margin:0;max-width:940px;font-weight:850;text-wrap:balance}
-.feature-hero h1 em{font-style:normal;color:#ffd071}.feature-deck{font-size:clamp(18px,2.1vw,25px);line-height:1.42;max-width:840px;margin:24px 0 0;color:#f1f3f5;font-weight:500}
-.feature-meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:28px;font-size:13px;color:#d7dde2}.feature-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;background:#c01113;color:#fff;text-decoration:none;font-weight:800;border:1px solid rgba(255,255,255,.28)}
-.lead-photo{margin:0;background:#0e161e;color:#fff}.lead-photo img{width:100%;height:clamp(300px,55vw,670px);object-fit:cover}.lead-photo figcaption{width:min(1180px,calc(100% - 40px));margin:auto;padding:12px 0 18px;font-size:12px;color:#cbd1d6}.lead-photo a{color:#fff}
+.feature-hero h1 em{font-style:normal;color:#c01113}.feature-deck{font-size:clamp(18px,2.1vw,25px);line-height:1.42;max-width:840px;margin:18px 0 0;color:#49515a;font-weight:500}
+.feature-meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:22px;font-size:13px;color:#66707a}.feature-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;background:#c01113;color:#fff;text-decoration:none;font-weight:800;border:1px solid #c01113}
+.lead-photo{margin:0;background:#0e161e;color:#fff}.lead-photo img{width:100%;height:380px;object-fit:cover;object-position:center 42%}.lead-photo figcaption{width:min(1180px,calc(100% - 40px));margin:auto;padding:9px 0 11px;font-size:11px;color:#cbd1d6}.lead-photo a{color:#fff}
 .chapter-nav{position:sticky;top:130px;z-index:900;background:rgba(255,255,255,.96);border-bottom:1px solid #dfe4e8;backdrop-filter:blur(10px);overflow:auto}.chapter-nav .feature-wide{display:flex;gap:4px;padding:8px 0;min-width:max-content}.chapter-nav a{text-decoration:none;padding:9px 12px;font-size:12px;font-weight:800;color:#3d4650;border-bottom:2px solid transparent}.chapter-nav a:hover,.chapter-nav a:focus-visible{color:#c01113;border-color:#c01113}
 .article{margin-top:58px;box-shadow:none;border:0;padding-top:12px}.story-kicker{font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#c01113;margin-bottom:12px}.story-title{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:0;margin:0 0 28px;text-wrap:balance}
 .kpi-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dfe4e8;border-bottom:1px solid #dfe4e8;margin:42px 0}.kpi{padding:26px 22px;border-right:1px solid #dfe4e8}.kpi:last-child{border-right:0}.kpi small{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:800;color:#66707a}.kpi strong{display:block;font-size:clamp(31px,4vw,52px);line-height:1;margin:10px 0 8px;letter-spacing:0}.kpi span{display:block;color:#66707a;font-size:13px;line-height:1.4}.kpi.prov strong{color:#0867c8}.kpi.rec strong{color:#d9363e}.kpi.gold strong{color:#8b670e}
@@ -557,7 +554,7 @@ footer p {
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 15px; text-align: center; }
     header .logo img { height: 75px; margin: 0 auto; }
-    .chapter-nav{top:126px}.feature-hero{min-height:calc(86svh - 126px)}.feature-hero-media{grid-template-columns:1fr}.feature-hero-media img:last-child{display:none}.feature-hero:after{background:linear-gradient(0deg,rgba(7,15,22,.95),rgba(7,15,22,.42))}.feature-inner,.feature-wide,.lead-photo figcaption{width:min(100% - 28px,1180px)}.kpi-strip{grid-template-columns:1fr}.kpi{border-right:0;border-bottom:1px solid #dfe4e8}.kpi:last-child{border-bottom:0}.context-map{grid-template-columns:1fr}.map-stage,.map-stage svg{min-height:320px}.data-viz{padding:22px 16px}
+    .chapter-nav{top:126px}.feature-inner,.feature-wide,.lead-photo figcaption{width:min(100% - 28px,1180px)}.feature-inner{padding:22px 0 26px}.lead-photo img{height:240px;object-position:center 40%}.kpi-strip{grid-template-columns:1fr}.kpi{border-right:0;border-bottom:1px solid #dfe4e8}.kpi:last-child{border-bottom:0}.context-map{grid-template-columns:1fr}.map-stage,.map-stage svg{min-height:320px}.data-viz{padding:22px 16px}
 }
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.js-reveal{opacity:1;transform:none;transition:none}}
@@ -583,11 +580,12 @@ footer p {
 </nav>
 </header>
 
+<figure class="lead-photo">
+  <img src="recoleta-desde-cerro-san-cristobal.jpg?v=20261014" alt="Vista de la comuna de Recoleta desde la cumbre del Cerro San Cristóbal">
+  <figcaption>Vista de Recoleta y Santiago Centro desde el Cerro San Cristóbal. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cerro_San_Cristobal_-_Vistas_desde_Cumbre_-_Recoleta_-_01.jpg" target="_blank" rel="noopener noreferrer">José Joaquín Cortes / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Imagen redimensionada para publicación web.</figcaption>
+</figure>
+
 <section class="feature-hero" aria-labelledby="feature-title">
-  <div class="feature-hero-media" aria-hidden="true">
-    <img src="providencia-desde-cerro-san-cristobal.jpg?v=20261014" alt="">
-    <img src="recoleta-desde-cerro-san-cristobal.jpg?v=20261014" alt="">
-  </div>
   <div class="feature-inner">
     <div class="feature-eyebrow">TDI Noticias / Especial multimedia / Finanzas municipales</div>
     <h1 id="feature-title">Providencia aporta al Fondo Común Municipal <em>más que todo el presupuesto anual de Recoleta</em></h1>
@@ -595,11 +593,6 @@ footer p {
     <div class="feature-meta"><a class="feature-cta" href="#contexto">Explorar los datos</a><span>Cifras de 2022 · lectura interactiva</span></div>
   </div>
 </section>
-
-<figure class="lead-photo">
-  <img src="recoleta-desde-cerro-san-cristobal.jpg?v=20261014" alt="Vista de la comuna de Recoleta desde la cumbre del Cerro San Cristóbal">
-  <figcaption>Vista de Recoleta y Santiago Centro desde el Cerro San Cristóbal. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cerro_San_Cristobal_-_Vistas_desde_Cumbre_-_Recoleta_-_01.jpg" target="_blank" rel="noopener noreferrer">José Joaquín Cortes / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Imagen redimensionada para publicación web.</figcaption>
-</figure>
 
 <nav class="chapter-nav" aria-label="Capítulos del reportaje"><div class="feature-wide">
   <a href="#contexto">01 Contexto</a><a href="#grafico-fcm">02 Magnitud</a><a href="#grafico-origen">03 Fondo Común</a><a href="#grafico-percapita">04 Por habitante</a><a href="#grafico-educacion">05 Educación</a><a href="#interpretacion">06 Interpretación</a>
