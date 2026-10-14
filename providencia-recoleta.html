@@ -24,7 +24,7 @@
   --soft-red:#fdf0f0;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height,130px) + 62px)}
 .article{
   width:min(900px,calc(100% - 32px));
   margin:36px auto 70px;
@@ -536,14 +536,16 @@ footer {
 .feature-meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:27px;font-size:12px;color:#c8d1da}.feature-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 19px;background:#e95660;color:#fff;text-decoration:none;font-weight:800;border:0;border-radius:999px}
 .feature-stat{justify-self:end;align-self:end;width:min(100%,340px);border:1px solid rgba(255,255,255,.36);background:rgba(7,26,43,.76);backdrop-filter:blur(7px);padding:28px;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.28)}.feature-stat strong{display:block;font-size:clamp(66px,8vw,106px);line-height:.95;font-weight:950;color:#ffa3a8;letter-spacing:0}.feature-stat span{display:block;margin-top:10px;color:#eef0f4;font-weight:750;line-height:1.42}.feature-stat small{display:block;margin-top:12px;color:#c3d1e0;font-size:11px;line-height:1.5}.feature-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.12em;color:#d3dce3;text-transform:uppercase;white-space:nowrap}
 .lead-photo{width:min(1180px,calc(100% - 40px));margin:36px auto 54px;background:transparent;color:#66707a}.lead-photo img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center 42%;border-radius:16px}.lead-photo figcaption{margin:10px 0 0;font-size:12px;line-height:1.6;color:#66707a}.lead-photo a{color:#8f0d0f;font-weight:700}
-.chapter-nav{position:sticky;top:130px;z-index:900;background:rgba(255,255,255,.96);border-bottom:1px solid #dfe4e8;backdrop-filter:blur(10px);overflow:auto}.chapter-nav .feature-wide{display:flex;gap:4px;padding:8px 0;min-width:max-content}.chapter-nav a{text-decoration:none;padding:9px 12px;font-size:12px;font-weight:800;color:#3d4650;border-bottom:2px solid transparent}.chapter-nav a:hover,.chapter-nav a:focus-visible{color:#c01113;border-color:#c01113}
-.article{margin-top:58px;box-shadow:none;border:0;padding-top:12px}.story-kicker{font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#c01113;margin-bottom:12px}.story-title{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:0;margin:0 0 28px;text-wrap:balance}
-.kpi-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dfe4e8;border-bottom:1px solid #dfe4e8;margin:42px 0}.kpi{padding:26px 22px;border-right:1px solid #dfe4e8}.kpi:last-child{border-right:0}.kpi small{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:800;color:#66707a}.kpi strong{display:block;font-size:clamp(31px,4vw,52px);line-height:1;margin:10px 0 8px;letter-spacing:0}.kpi span{display:block;color:#66707a;font-size:13px;line-height:1.4}.kpi.prov strong{color:#0867c8}.kpi.rec strong{color:#d9363e}.kpi.gold strong{color:#8b670e}
-.context-map{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);border:1px solid #ced6dc;background:#fff;margin:46px 0;min-height:440px}.map-stage{position:relative;overflow:hidden;background:#e8eef1;min-height:400px}.map-stage svg{width:100%;height:100%;min-height:400px}.map-pin{position:absolute;transform:translate(-50%,-50%);border:0;border-radius:50%;width:46px;height:46px;color:#fff;font-weight:900;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.25);transition:transform .2s ease}.map-pin:hover,.map-pin:focus-visible{transform:translate(-50%,-50%) scale(1.12)}.map-pin.prov{left:66%;top:64%;background:#0867c8}.map-pin.rec{left:35%;top:32%;background:#d9363e}.map-detail{padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;justify-content:center}.map-detail small{color:#66707a;font-weight:850;text-transform:uppercase;letter-spacing:.1em}.map-detail h3{font-size:34px;line-height:1;margin:12px 0 18px}.map-detail p{font-size:17px;line-height:1.6;margin:0;color:#3e4851}.map-note{font-size:11px;color:#66707a;margin-top:20px}
-.data-viz{padding:32px;border:1px solid #cfd6dc;box-shadow:0 18px 48px rgba(20,33,45,.07);background:#fff}.viz-kicker{color:#c01113}.chapter-break{margin-top:78px;padding-top:28px;border-top:8px solid #15191d}.chapter-break .story-kicker{margin-bottom:8px}
-.fund-explainer{margin:42px 0;border-top:1px solid #b9c2c9}.fund-item{border-bottom:1px solid #b9c2c9}.fund-button{width:100%;border:0;background:transparent;padding:20px 4px;display:flex;justify-content:space-between;align-items:center;text-align:left;font-weight:850;font-size:18px;cursor:pointer}.fund-button span:last-child{font-size:26px;color:#c01113}.fund-panel{display:none;padding:0 4px 22px;color:#3f4850;line-height:1.65}.fund-item.open .fund-panel{display:block}.fund-item.open .fund-button span:last-child{transform:rotate(45deg)}
-.reading-check{margin:64px 0 12px;background:#101820;color:#fff;padding:clamp(28px,5vw,50px)}.reading-check h2{color:#fff;margin-top:0}.reading-check p{color:#d3dae0}.quiz-options{display:grid;gap:10px;margin-top:24px}.quiz-option{border:1px solid #64717b;background:transparent;color:#fff;padding:15px;text-align:left;cursor:pointer;font-weight:750}.quiz-option:hover,.quiz-option:focus-visible{border-color:#ff777a}.quiz-feedback{display:none;margin-top:18px;padding:16px;background:#fff;color:#252a2f}.quiz-feedback.show{display:block}.quiz-feedback.good{border-left:5px solid #16845c}.quiz-feedback.bad{border-left:5px solid #c01113}
-.photo-credit-block{margin:48px 0 0;background:#101820;color:#fff}.photo-credit-block img{width:100%;aspect-ratio:16/9;object-fit:cover}.photo-credit-block p{font-size:12px;color:#cbd1d6;padding:12px 16px;margin:0}.photo-credit-block a{color:#fff}
+.chapter-nav{position:sticky;top:var(--header-height,130px);z-index:900;background:rgba(255,255,255,.96);border-bottom:1px solid #dfe4e8;backdrop-filter:blur(10px);overflow:auto}.chapter-nav .feature-wide{display:flex;gap:4px;padding:8px 0;min-width:max-content}.chapter-nav a{text-decoration:none;padding:9px 12px;font-size:12px;font-weight:800;color:#3d4650;border-bottom:2px solid transparent}.chapter-nav a:hover,.chapter-nav a:focus-visible{color:#c01113;border-color:#c01113}.chapter-nav a[aria-current="location"]{background:#c01113;color:#fff;border-color:#c01113}
+.article{width:100%;max-width:none;margin:0;padding:0;background:transparent;border:0;box-shadow:none}.story-band{position:relative;padding:84px 0;overflow:hidden}.story-shell{width:min(1180px,calc(100% - 40px));margin-inline:auto}.reading-shell{width:min(780px,100%)}.story-kicker{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#c01113;margin-bottom:10px}.story-title{font-size:clamp(38px,5vw,64px);line-height:1.03;letter-spacing:0;margin:0;text-wrap:balance}.chapter-heading{display:grid;grid-template-columns:180px minmax(0,1fr);gap:34px;align-items:start;margin-bottom:36px}.chapter-index{font-size:74px;line-height:.85;font-weight:950;color:#d7dde2}.chapter-heading p{font-size:17px;line-height:1.65;color:#5b6671;margin:16px 0 0;max-width:760px}.copy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:38px;margin:0 0 42px}.copy-grid p,.story-copy p{font-size:18px;line-height:1.82;margin:0 0 22px;color:#28313a}.copy-grid p:last-child,.story-copy p:last-child{margin-bottom:0}
+.contrast-band{background:#fff}.kpi-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:36px 0 50px}.kpi{padding:25px 22px;border:1px solid #dae2e8;border-radius:16px;background:#f7f9fb;min-width:0}.kpi small{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:850;color:#66707a}.kpi strong{display:block;font-size:clamp(31px,4vw,52px);line-height:1;margin:10px 0 8px;letter-spacing:0}.kpi span{display:block;color:#66707a;font-size:13px;line-height:1.4}.kpi.prov{background:#eef7fd}.kpi.rec{background:#fff1f1}.kpi.gold{background:#fff8e8}.kpi.prov strong{color:#0867c8}.kpi.rec strong{color:#d9363e}.kpi.gold strong{color:#8b670e}
+.context-map{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);border:1px solid #ced6dc;border-radius:20px;overflow:hidden;background:#fff;margin:0;min-height:440px;box-shadow:0 16px 44px rgba(20,33,45,.08)}.map-stage{position:relative;overflow:hidden;background:#e8eef1;min-height:400px}.map-stage svg{width:100%;height:100%;min-height:400px}.map-pin{position:absolute;transform:translate(-50%,-50%);border:0;border-radius:50%;width:46px;height:46px;color:#fff;font-weight:900;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.25);transition:transform .2s ease}.map-pin:hover,.map-pin:focus-visible{transform:translate(-50%,-50%) scale(1.12)}.map-pin.prov{left:66%;top:64%;background:#0867c8}.map-pin.rec{left:35%;top:32%;background:#d9363e}.map-detail{padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;justify-content:center}.map-detail small{color:#66707a;font-weight:850;text-transform:uppercase;letter-spacing:.1em}.map-detail h3{font-size:34px;line-height:1;margin:12px 0 18px}.map-detail p{font-size:17px;line-height:1.6;margin:0;color:#3e4851}.map-note{font-size:11px;color:#66707a;margin-top:20px}
+.fcm-band{background:#0c2033;color:#fff}.fcm-band:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 20%,rgba(55,163,234,.17),transparent 32%);pointer-events:none}.fcm-band .story-shell{position:relative}.fcm-band .chapter-index{color:#28465f}.fcm-band .story-kicker{color:#ffa3a8}.fcm-band .story-title,.fcm-band .chapter-heading p,.fcm-band .story-copy p{color:#fff}.fcm-band .chapter-heading p,.fcm-band .story-copy p{color:#ccd8e2}.fcm-band .data-viz{background:#112d45;border-color:#315069;color:#fff}.fcm-band .data-viz h3{color:#fff}.fcm-band .viz-sub,.fcm-band .viz-source{color:#b7c7d5}.fcm-band .donut-center{background:#0c2033;color:#fff;box-shadow:0 0 0 1px #315069}.fcm-band .donut-bg{stroke:#29445a}.fcm-band .legend-item{border-color:#355169;color:#fff}.fcm-band .legend-item:hover,.fcm-band .legend-item.active{background:#193a54}.fcm-band .donut-detail{background:#0a1928;color:#dce7ef}.fcm-band .fund-explainer{border-color:#3c5367}.fcm-band .fund-item{border-color:#3c5367}.fcm-band .fund-button{color:#fff}.fcm-band .fund-panel{color:#c7d4df}
+.data-viz{margin:42px 0;padding:clamp(24px,4vw,40px);border:1px solid #cfd6dc;border-radius:20px;box-shadow:0 18px 48px rgba(20,33,45,.07);background:#fff}.viz-kicker{color:#c01113}.data-viz h3{letter-spacing:0}.fund-explainer{margin:38px 0 0;border-top:1px solid #b9c2c9}.fund-item{border-bottom:1px solid #b9c2c9}.fund-button{width:100%;border:0;background:transparent;padding:20px 4px;display:flex;justify-content:space-between;align-items:center;text-align:left;font-weight:850;font-size:18px;cursor:pointer}.fund-button span:last-child{font-size:26px;color:#ef6c73}.fund-panel{display:none;padding:0 4px 22px;color:#3f4850;line-height:1.65}.fund-item.open .fund-panel{display:block}.fund-item.open .fund-button span:last-child{transform:rotate(45deg)}
+.difference-band{background:#edf2f5}.budget-controls,.focus-switch{display:flex;gap:7px;flex-wrap:wrap;margin:24px 0}.budget-controls button,.focus-switch button{border:1px solid #b9c7d2;background:#fff;color:#233648;border-radius:999px;padding:10px 15px;font-weight:800;font-size:12px}.budget-controls button[aria-pressed=true],.focus-switch button[aria-pressed=true]{background:#0f2f49;border-color:#0f2f49;color:#fff}.budget-scene{display:grid;grid-template-columns:1fr 150px 1fr;align-items:center;gap:22px;min-height:340px;padding:25px;background:linear-gradient(145deg,#f8fafc,#e2e9ee);border-radius:18px}.budget-orb{display:flex;align-items:center;justify-content:center;flex-direction:column;justify-self:center;width:clamp(176px,22vw,270px);aspect-ratio:1;border-radius:50%;text-align:center;padding:25px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4),0 18px 38px rgba(18,39,57,.16);transition:transform .45s ease}.budget-orb.providencia{background:linear-gradient(145deg,#0873d8,#36a7ea);color:#fff;transform:scale(var(--prov-scale,1))}.budget-orb.recoleta{background:linear-gradient(145deg,#c72c36,#f06d68);color:#fff;transform:scale(.926)}.budget-orb small{font-size:11px;text-transform:uppercase;font-weight:850;letter-spacing:.08em}.budget-orb strong{font-size:clamp(28px,4vw,48px);line-height:1;margin:10px 0 6px}.budget-orb span{font-size:12px;line-height:1.35}.budget-gap{text-align:center}.budget-gap strong{display:block;font-size:clamp(27px,4vw,47px);line-height:1;color:#8b670e}.budget-gap span{display:block;font-size:11px;font-weight:800;color:#5d6872;margin-top:8px;text-transform:uppercase}.budget-note{font-size:12px;color:#66707a;margin-top:16px;line-height:1.55}
+.percapita-band{background:#fff}.percapita-band .data-viz{border:0;background:linear-gradient(145deg,#102c45,#173f5f);color:#fff;box-shadow:none}.percapita-band .data-viz h3{color:#fff}.percapita-band .viz-sub,.percapita-band .viz-source{color:#bdd0df}.percapita-band .scale{background:#0b2235}.percapita-band .tick{color:#aebfcd}.percapita-band .gridline{background:#ffffff24}.percapita-band .ratio-note{border-color:#ffffff30}.percapita-band .focus-switch button{background:#ffffff12;border-color:#ffffff3b;color:#fff}.percapita-band .focus-switch button[aria-pressed=true]{background:#fff;color:#163750}.lollipop.focus-providencia .lolli-row.r,.lollipop.focus-recoleta .lolli-row.p{opacity:.22}.lolli-row{transition:opacity .25s}
+.education-band{background:#f7eeee}.education-band:after{content:"";position:absolute;right:-160px;top:90px;width:430px;height:430px;border:1px solid rgba(192,17,19,.13);border-radius:50%;pointer-events:none}.education-band .story-shell{position:relative}.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}.edu-card{width:100%;border:1px solid #d4dce3;border-radius:16px;background:#fff;padding:24px;text-align:left;color:#1d2934;transition:transform .2s,border-color .2s,opacity .2s}.edu-card:hover,.edu-card[aria-pressed=true]{transform:translateY(-3px);border-color:#c01113}.education-grid[data-focus="inicio"] .edu-card[data-edu="despues"],.education-grid[data-focus="despues"] .edu-card[data-edu="inicio"]{opacity:.38}.edu-summary{margin-top:16px;border-radius:14px}.education-band .story-copy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;margin-top:36px}
+.conclusion-band{background:linear-gradient(135deg,#071725,#102e47 68%,#4a1823);color:#fff}.conclusion-band .chapter-index{color:#29445b}.conclusion-band .story-kicker{color:#ffa3a8}.conclusion-band .story-title,.conclusion-band p{color:#fff}.conclusion-band .copy-grid p{color:#d3dde6}.closing-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:38px}.reading-check{margin:0;background:#0a1b2a;color:#fff;padding:clamp(28px,5vw,46px);border:1px solid #ffffff2e;border-radius:20px}.reading-check h2{color:#fff;margin-top:0}.reading-check p{color:#d3dae0}.quiz-options{display:grid;gap:10px;margin-top:24px}.quiz-option{border:1px solid #64717b;background:transparent;color:#fff;padding:15px;text-align:left;cursor:pointer;font-weight:750;border-radius:11px}.quiz-option:hover,.quiz-option:focus-visible{border-color:#ff777a;background:#ffffff0b}.quiz-feedback{display:none;margin-top:18px;padding:16px;background:#fff;color:#252a2f;border-radius:10px}.quiz-feedback.show{display:block}.quiz-feedback.good{border-left:5px solid #16845c}.quiz-feedback.bad{border-left:5px solid #c01113}.photo-credit-block{margin:0;background:#071722;color:#fff;border-radius:20px;overflow:hidden;border:1px solid #ffffff2e}.photo-credit-block img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.photo-credit-block p{font-size:12px;color:#cbd1d6;padding:13px 16px;margin:0}.photo-credit-block a{color:#fff}
 .js-reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.js-reveal.is-visible{opacity:1;transform:none}
 
 /* Protect the original footer from the article's generic p rule */
@@ -557,7 +559,7 @@ footer p {
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 15px; text-align: center; }
     header .logo img { height: 75px; margin: 0 auto; }
-    .chapter-nav{top:126px}.feature-inner,.feature-wide,.lead-photo{width:min(100% - 28px,1180px)}.feature-hero{min-height:0}.feature-inner{grid-template-columns:1fr;gap:24px;padding:55px 0 70px}.feature-hero h1{font-size:clamp(39px,10vw,62px);line-height:1.02}.feature-stat{justify-self:start;align-self:auto;padding:20px}.feature-stat strong{font-size:68px}.lead-photo{margin:24px auto 42px}.lead-photo img{object-position:center 40%;border-radius:10px}.kpi-strip{grid-template-columns:1fr}.kpi{border-right:0;border-bottom:1px solid #dfe4e8}.kpi:last-child{border-bottom:0}.context-map{grid-template-columns:1fr}.map-stage,.map-stage svg{min-height:320px}.data-viz{padding:22px 16px}
+    .feature-inner,.feature-wide,.lead-photo,.story-shell{width:min(100% - 28px,1180px)}.feature-hero{min-height:0}.feature-inner{grid-template-columns:1fr;gap:24px;padding:55px 0 70px}.feature-hero h1{font-size:clamp(39px,10vw,62px);line-height:1.02}.feature-stat{justify-self:start;align-self:auto;padding:20px}.feature-stat strong{font-size:68px}.lead-photo{margin:24px auto 42px}.lead-photo img{object-position:center 40%;border-radius:10px}.story-band{padding:60px 0}.chapter-heading{grid-template-columns:1fr;gap:14px}.chapter-index{font-size:54px}.copy-grid,.education-band .story-copy,.closing-layout{grid-template-columns:1fr;gap:20px}.kpi-strip{grid-template-columns:1fr}.context-map{grid-template-columns:1fr}.map-stage,.map-stage svg{min-height:320px}.data-viz{padding:22px 16px}.budget-scene{grid-template-columns:1fr;gap:18px}.budget-gap{order:2}.budget-orb.recoleta{order:3}.education-grid{grid-template-columns:1fr}.photo-credit-block img{aspect-ratio:16/10}
 }
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.js-reveal{opacity:1;transform:none;transition:none}}
@@ -601,235 +603,48 @@ footer p {
 </figure>
 
 <nav class="chapter-nav" aria-label="Capítulos del reportaje"><div class="feature-wide">
-  <a href="#contexto">01 Contexto</a><a href="#grafico-fcm">02 Magnitud</a><a href="#grafico-origen">03 Fondo Común</a><a href="#grafico-percapita">04 Por habitante</a><a href="#grafico-educacion">05 Educación</a><a href="#interpretacion">06 Interpretación</a>
+  <a href="#contexto">01 Contraste</a><a href="#fondo-comun">02 Fondo Común</a><a href="#diferencia">03 Diferencia</a><a href="#por-habitante">04 Por habitante</a><a href="#educacion">05 Educación</a><a href="#conclusiones">06 Conclusiones</a>
 </div></nav>
 
-<article class="article" id="contexto">
-  <div class="story-kicker">01 / Dos comunas vecinas</div>
-  <h2 class="story-title">Una distancia corta. Dos realidades fiscales.</h2>
+<article class="article">
+  <section class="story-band contrast-band" id="contexto"><div class="story-shell">
+    <div class="chapter-heading"><div class="chapter-index">01</div><div><div class="story-kicker">Dos comunas vecinas</div><h2 class="story-title">Una distancia corta. Dos realidades fiscales.</h2><p>El primer contraste permite dimensionar dos escalas municipales distintas en un mismo año.</p></div></div>
+    <div class="copy-grid"><p>Dos comunas separadas por el Cerro San Cristóbal y el Río Mapocho enfrentaron durante 2022 realidades financieras marcadamente diferentes. Mientras la Municipalidad de Providencia destinó $50.515 millones al Fondo Común Municipal (FCM), la Municipalidad de Recoleta administró durante ese mismo año un presupuesto total de $43.314 millones.</p><p>La diferencia supera los $7.200 millones. En otras palabras, solo el aporte realizado por Providencia al mecanismo de redistribución de recursos municipales fue superior a todo el presupuesto con el que Recoleta contó durante el año para financiar su gestión comunal.</p></div>
+    <div class="kpi-strip js-reveal"><div class="kpi prov"><small>Aporte de Providencia al FCM</small><strong data-counter="50515">$50.515</strong><span>millones de pesos, 2022</span></div><div class="kpi rec"><small>Presupuesto total de Recoleta</small><strong data-counter="43314">$43.314</strong><span>millones de pesos, 2022</span></div><div class="kpi gold"><small>Diferencia aproximada</small><strong data-counter="7201">$7.201</strong><span>millones de pesos</span></div></div>
+    <div class="context-map js-reveal"><div class="map-stage" aria-label="Esquema interactivo de Providencia y Recoleta"><svg viewBox="0 0 680 430" role="img" aria-labelledby="map-title map-desc"><title id="map-title">Contexto territorial de Providencia y Recoleta</title><desc id="map-desc">Esquema conceptual, no a escala, con las dos comunas y el Cerro San Cristóbal.</desc><rect width="680" height="430" fill="#e8eef1"/><path d="M0 240 C120 210 190 270 310 230 S520 190 680 225" fill="none" stroke="#5aa7cd" stroke-width="24" opacity=".7"/><path d="M105 40 C225 10 350 45 450 125 C380 155 305 170 220 156 C165 145 118 105 105 40Z" fill="#849c83" opacity=".78"/><path d="M64 55 C150 95 192 172 180 245 C115 237 58 205 24 147Z" fill="#f1a3a6"/><path d="M398 170 C502 162 594 212 644 332 C560 365 468 350 386 288Z" fill="#9fd4ed"/><text x="195" y="98" fill="#fff" font-size="18" font-weight="800">CERRO SAN CRISTÓBAL</text><text x="250" y="247" fill="#2e6985" font-size="15" font-weight="800">RÍO MAPOCHO</text><text x="70" y="185" fill="#8f1b22" font-size="22" font-weight="900">RECOLETA</text><text x="464" y="280" fill="#075b9a" font-size="22" font-weight="900">PROVIDENCIA</text></svg><button class="map-pin rec" type="button" data-place="recoleta" aria-label="Mostrar datos de Recoleta">R</button><button class="map-pin prov" type="button" data-place="providencia" aria-label="Mostrar datos de Providencia">P</button></div><div class="map-detail" aria-live="polite"><small id="map-kicker">Selecciona una comuna</small><h3 id="map-name">Dos territorios</h3><p id="map-copy">Toca los puntos para recuperar las cifras centrales de cada municipio durante 2022.</p><div class="map-note">Esquema contextual, no a escala ni equivalente a límites administrativos oficiales.</div></div></div>
+  </div></section>
 
-  <p>Dos comunas separadas por el Cerro San Cristóbal y el Río Mapocho enfrentaron durante 2022 realidades financieras marcadamente diferentes. Mientras la Municipalidad de Providencia destinó $50.515 millones al Fondo Común Municipal (FCM), la Municipalidad de Recoleta administró durante ese mismo año un presupuesto total de $43.314 millones.</p>
+  <section class="story-band fcm-band" id="fondo-comun"><div class="story-shell">
+    <div class="chapter-heading"><div class="chapter-index">02</div><div><div class="story-kicker">El mecanismo redistributivo</div><h2 class="story-title">¿De dónde viene el aporte al Fondo Común Municipal?</h2><p>Explora los componentes informados y las claves necesarias para interpretar la comparación.</p></div></div>
+    <div class="story-copy reading-shell"><p>De acuerdo con los antecedentes presupuestarios analizados, el aporte de Providencia estuvo compuesto principalmente por transferencias asociadas a patentes municipales, permisos de circulación y multas. Las patentes municipales representaron $36.782 millones, mientras que los permisos de circulación alcanzaron $12.424 millones y las multas, $1.308 millones.</p></div>
+    <figure class="data-viz js-reveal" id="grafico-origen"><div class="viz-kicker">Composición interactiva</div><h3>¿De dónde viene el aporte de Providencia al FCM?</h3><div class="viz-sub">Selecciona cada componente para revisar su magnitud.</div><div class="donut-layout"><div class="donut-box"><svg viewBox="0 0 220 220" aria-label="Composición del aporte al FCM"><circle class="donut-bg" cx="110" cy="110" r="78"></circle><circle class="donut-seg" id="seg1" cx="110" cy="110" r="78" stroke="#0867c8"></circle><circle class="donut-seg" id="seg2" cx="110" cy="110" r="78" stroke="#37a3ea"></circle><circle class="donut-seg" id="seg3" cx="110" cy="110" r="78" stroke="#d79d1e"></circle></svg><div class="donut-center"><small>Aporte total</small><strong>$50.515</strong></div></div><div><div class="legend"><div class="legend-item" data-index="0" data-label="Patentes municipales" data-value="$36.782 millones" data-pct="73,0%"><span class="legend-dot" style="background:#0867c8"></span><span class="legend-name">Patentes municipales</span><span class="legend-value">$36.782</span><span class="legend-pct">73,0%</span></div><div class="legend-item" data-index="1" data-label="Permisos de circulación" data-value="$12.424 millones" data-pct="24,6%"><span class="legend-dot" style="background:#37a3ea"></span><span class="legend-name">Permisos de circulación</span><span class="legend-value">$12.424</span><span class="legend-pct">24,6%</span></div><div class="legend-item" data-index="2" data-label="Multas" data-value="$1.308 millones" data-pct="2,6%"><span class="legend-dot" style="background:#d79d1e"></span><span class="legend-name">Multas</span><span class="legend-value">$1.308</span><span class="legend-pct">2,6%</span></div></div><div class="donut-detail" id="donutDetail">Pasa el mouse o toca una categoría para ver el detalle.</div></div></div><figcaption class="viz-source">Fuente: antecedentes presupuestarios citados en el reportaje.</figcaption></figure>
+    <div class="story-copy reading-shell"><p>La magnitud del aporte también se encuentra respaldada por la Cuenta Pública 2022 de Providencia, que registra una participación de $51.143 millones en el Fondo Común Municipal. El mismo documento señala que las comunas de Santiago, Las Condes, Vitacura y Providencia están obligadas legalmente a realizar un mayor aporte al FCM.</p></div>
+    <div class="fund-explainer js-reveal" aria-label="Claves para leer el Fondo Común Municipal"><div class="fund-item"><button class="fund-button" type="button" aria-expanded="false"><span>¿Qué muestra esta comparación?</span><span>+</span></button><div class="fund-panel">Dimensiona la escala del aporte de Providencia frente al presupuesto total de Recoleta durante 2022.</div></div><div class="fund-item"><button class="fund-button" type="button" aria-expanded="false"><span>¿Qué no permite concluir?</span><span>+</span></button><div class="fund-panel">No significa que ambos presupuestos tengan las mismas funciones, fuentes de financiamiento o estructura de gastos.</div></div><div class="fund-item"><button class="fund-button" type="button" aria-expanded="false"><span>¿Por qué Providencia aporta más?</span><span>+</span></button><div class="fund-panel">La Cuenta Pública 2022 señala que Santiago, Las Condes, Vitacura y Providencia están obligadas legalmente a realizar un mayor aporte al FCM.</div></div></div>
+  </div></section>
 
-  <p>La diferencia supera los $7.200 millones. En otras palabras, solo el aporte realizado por Providencia al mecanismo de redistribución de recursos municipales fue superior a todo el presupuesto con el que Recoleta contó durante el año para financiar su gestión comunal.</p>
+  <section class="story-band difference-band" id="diferencia"><div class="story-shell">
+    <div class="chapter-heading"><div class="chapter-index">03</div><div><div class="story-kicker">La diferencia presupuestaria</div><h2 class="story-title">Dos montos, una escala difícil de ignorar.</h2><p>Cambia entre el aporte informado y la ejecución real de Providencia para comparar cada cifra con el presupuesto total de Recoleta.</p></div></div>
+    <figure class="data-viz js-reveal" id="grafico-fcm"><div class="viz-kicker">Comparador dinámico</div><h3>Aporte de Providencia al FCM vs. presupuesto total de Recoleta</h3><div class="viz-sub">Millones de pesos · 2022</div><div class="budget-controls" role="group" aria-label="Seleccionar cifra de Providencia"><button type="button" data-compare="informado" aria-pressed="true">Aporte informado</button><button type="button" data-compare="ejecutado" aria-pressed="false">Ejecución real</button></div><div class="budget-scene" aria-live="polite"><div class="budget-orb providencia" id="prov-orb"><small>Providencia</small><strong id="prov-amount">$50.515</strong><span id="prov-label">Aporte informado al FCM</span></div><div class="budget-gap"><strong id="budget-gap">+$7.201</strong><span>millones de diferencia</span></div><div class="budget-orb recoleta"><small>Recoleta</small><strong>$43.314</strong><span>Presupuesto municipal total</span></div></div><div class="budget-note">Los círculos representan magnitudes relativas. La comparación no equipara las funciones, fuentes de financiamiento ni estructura de gastos de ambos presupuestos.</div><figcaption class="viz-source">Fuente: antecedentes presupuestarios citados en el reportaje.</figcaption></figure>
+  </div></section>
 
-  <div class="kpi-strip js-reveal">
-    <div class="kpi prov"><small>Aporte de Providencia al FCM</small><strong data-counter="50515">$50.515</strong><span>millones de pesos, 2022</span></div>
-    <div class="kpi rec"><small>Presupuesto total de Recoleta</small><strong data-counter="43314">$43.314</strong><span>millones de pesos, 2022</span></div>
-    <div class="kpi gold"><small>Diferencia aproximada</small><strong data-counter="7201">$7.201</strong><span>millones de pesos</span></div>
-  </div>
+  <section class="story-band percapita-band" id="por-habitante"><div class="story-shell">
+    <div class="chapter-heading"><div class="chapter-index">04</div><div><div class="story-kicker">Recursos por habitante</div><h2 class="story-title">Una brecha que también se observa por habitante.</h2><p>La escala cambia cuando los recursos disponibles se relacionan con la población de cada comuna.</p></div></div>
+    <div class="copy-grid"><div><p>La diferencia entre ambas comunas no se limita al tamaño de sus presupuestos. Al relacionar los recursos municipales disponibles con la población de cada territorio, la distancia también resulta significativa.</p><p>Durante 2022, Providencia contó con un presupuesto vigente de $174.795 millones para una población aproximada de 147.000 habitantes, equivalente a unos $1.189.000 por vecino.</p></div><div><p>Recoleta, en cambio, contó con un presupuesto municipal de $43.314 millones para cerca de 158.000 habitantes, lo que representa aproximadamente $274.100 por habitante.</p><p>El cruce de ambos datos arroja una diferencia de entre 4,3 y 4,4 veces en los recursos municipales disponibles por habitante.</p><p>La comparación debe entenderse dentro de las diferencias de población y de estructura de ingresos de ambas comunas. Como referencia, las proyecciones de población del INE utilizadas por la Biblioteca del Congreso Nacional sitúan para 2022 a Providencia en 161.568 habitantes y a Recoleta en 195.185.</p></div></div>
+    <figure class="data-viz js-reveal lollipop" id="grafico-percapita"><div class="viz-kicker">Brecha por habitante</div><h3>Presupuesto municipal disponible por habitante</h3><div class="viz-sub">Pesos por habitante · 2022</div><div class="focus-switch" role="group" aria-label="Destacar comuna"><button type="button" data-focus="ambas" aria-pressed="true">Comparar ambas</button><button type="button" data-focus="providencia" aria-pressed="false">Providencia</button><button type="button" data-focus="recoleta" aria-pressed="false">Recoleta</button></div><div class="scale"><div class="gridline" style="left:10%"></div><div class="gridline" style="left:32.5%"></div><div class="gridline" style="left:55%"></div><div class="gridline" style="left:77.5%"></div><div class="gridline" style="left:100%"></div><span class="tick" style="left:10%">0</span><span class="tick" style="left:32.5%">300 mil</span><span class="tick" style="left:55%">600 mil</span><span class="tick" style="left:77.5%">900 mil</span><span class="tick" style="left:100%">1,2 mill.</span><div class="lolli-row p"><div class="lolli-label prov">Providencia</div><div class="lolli-line p" id="lineP"></div><div class="lolli-dot p" id="dotP"></div><div class="lolli-value prov" id="valP">$1.189.000</div></div><div class="lolli-row r"><div class="lolli-label rec">Recoleta</div><div class="lolli-line r" id="lineR"></div><div class="lolli-dot r" id="dotR"></div><div class="lolli-value rec" id="valR">$274.100</div></div></div><div class="ratio-note"><span>Brecha aproximada</span><strong>4,34 veces</strong></div><figcaption class="viz-source">Fuente: datos utilizados en el reportaje.</figcaption></figure>
+  </div></section>
 
-  <div class="context-map js-reveal">
-    <div class="map-stage" aria-label="Esquema interactivo de Providencia y Recoleta">
-      <svg viewBox="0 0 680 430" role="img" aria-labelledby="map-title map-desc"><title id="map-title">Contexto territorial de Providencia y Recoleta</title><desc id="map-desc">Esquema conceptual, no a escala, con las dos comunas y el Cerro San Cristóbal.</desc><rect width="680" height="430" fill="#e8eef1"/><path d="M0 240 C120 210 190 270 310 230 S520 190 680 225" fill="none" stroke="#5aa7cd" stroke-width="24" opacity=".7"/><path d="M105 40 C225 10 350 45 450 125 C380 155 305 170 220 156 C165 145 118 105 105 40Z" fill="#849c83" opacity=".78"/><path d="M64 55 C150 95 192 172 180 245 C115 237 58 205 24 147Z" fill="#f1a3a6"/><path d="M398 170 C502 162 594 212 644 332 C560 365 468 350 386 288Z" fill="#9fd4ed"/><text x="195" y="98" fill="#fff" font-size="18" font-weight="800">CERRO SAN CRISTÓBAL</text><text x="250" y="247" fill="#2e6985" font-size="15" font-weight="800">RÍO MAPOCHO</text><text x="70" y="185" fill="#8f1b22" font-size="22" font-weight="900">RECOLETA</text><text x="464" y="280" fill="#075b9a" font-size="22" font-weight="900">PROVIDENCIA</text></svg>
-      <button class="map-pin rec" type="button" data-place="recoleta" aria-label="Mostrar datos de Recoleta">R</button>
-      <button class="map-pin prov" type="button" data-place="providencia" aria-label="Mostrar datos de Providencia">P</button>
-    </div>
-    <div class="map-detail" aria-live="polite"><small id="map-kicker">Selecciona una comuna</small><h3 id="map-name">Dos territorios</h3><p id="map-copy">Toca los puntos para recuperar las cifras centrales de cada municipio durante 2022.</p><div class="map-note">Esquema contextual, no a escala ni equivalente a límites administrativos oficiales.</div></div>
-  </div>
+  <section class="story-band education-band" id="educacion"><div class="story-shell">
+    <div class="chapter-heading"><div class="chapter-index">05</div><div><div class="story-kicker">Educación y finanzas municipales</div><h2 class="story-title">Un déficit de arrastre condicionó el ejercicio.</h2><p>Selecciona cada momento para observar cómo cambió el saldo negativo durante 2022.</p></div></div>
+    <div class="copy-grid"><p>Las diferencias también aparecen al observar específicamente el área de educación de Recoleta.</p><p>Al comenzar 2022, el área registró un saldo inicial de caja negativo de $3.308 millones. Después de la primera modificación presupuestaria, el déficit de arrastre quedó en -$2.055 millones y se mantuvo durante el resto del ejercicio.</p></div>
+    <figure class="data-viz js-reveal" id="grafico-educacion"><div class="viz-kicker">Educación · Recoleta</div><h3>Déficit de arrastre durante 2022</h3><div class="viz-sub">Toca cada etapa para aislarla o compara ambas.</div><div class="education-grid" data-focus="ambas"><button class="edu-card" type="button" data-edu="inicio" aria-pressed="false"><div><div class="edu-label">Inicio del año</div><div class="edu-number" data-counter="-3308">-$3.308 millones</div><div class="edu-sub">Saldo inicial de caja negativo.</div></div><div class="edu-track"><div class="edu-fill" data-w="100"></div></div></button><button class="edu-card" type="button" data-edu="despues" aria-pressed="false"><div><div class="edu-label">Tras primera modificación</div><div class="edu-number" data-counter="-2055">-$2.055 millones</div><div class="edu-sub">Déficit de arrastre que se mantuvo durante el resto del ejercicio.</div></div><div class="edu-track"><div class="edu-fill" data-w="62.1"></div></div></button></div><div class="edu-summary" id="edu-summary">El déficit se redujo en aproximadamente <strong>$1.253 millones</strong>, pero el área continuó con saldo negativo durante el ejercicio.</div><figcaption class="viz-source">Fuente: cifras consignadas en el reportaje.</figcaption></figure>
+    <div class="story-copy"><div><p>Esto significa que el área de Educación de Recoleta inició el período presupuestario con una situación financiera negativa que condicionó la administración de sus recursos durante el año. El municipio debió enfrentar este escenario mientras sostenía el funcionamiento de sus establecimientos educacionales, junto con compromisos financieros y obligaciones con proveedores.</p><p>En el caso de Providencia, el escenario financiero municipal era considerablemente distinto. La Cuenta Pública 2022 registra ingresos municipales totales por $179.542 millones y señala que, después de considerar los compromisos correspondientes al Fondo Común Municipal, educación, salud y otros conceptos, quedaron $104.087 millones disponibles para la gestión municipal.</p></div><div><p>La misma Cuenta Pública registra además un aporte directo al Fondo Común Municipal de $51.143 millones y un aporte municipal a Salud y Educación de $10.747 millones.</p></div></div>
+  </div></section>
 
-  <figure class="data-viz js-reveal" id="grafico-fcm">
-    <div class="viz-kicker">Comparación</div>
-    <h3>Aporte de Providencia al FCM vs. presupuesto total de Recoleta</h3>
-    <div class="viz-sub">Millones de pesos · 2022</div>
-
-    <div class="race">
-      <div class="race-row">
-        <div class="race-label">Aporte Providencia al FCM</div>
-        <div class="race-track"><div class="race-fill blue" data-w="84.19"></div></div>
-        <div class="race-value prov">$50.515</div>
-      </div>
-      <div class="race-row">
-        <div class="race-label">Ejecución real Providencia</div>
-        <div class="race-track"><div class="race-fill light" data-w="83.36"></div></div>
-        <div class="race-value" style="color:#258dcd">$50.014</div>
-      </div>
-      <div class="race-row">
-        <div class="race-label">Presupuesto total Recoleta</div>
-        <div class="race-track"><div class="race-fill red" data-w="72.19"></div></div>
-        <div class="race-value rec">$43.314</div>
-      </div>
-    </div>
-
-    <div class="big-callout">
-      <div><div class="label">Diferencia aproximada</div></div>
-      <div class="number">$7.201 millones</div>
-    </div>
-    <figcaption class="viz-source">Fuente: antecedentes presupuestarios citados en el reportaje.</figcaption>
-  </figure>
-
-  <p>De acuerdo con los antecedentes presupuestarios analizados, el aporte de Providencia estuvo compuesto principalmente por transferencias asociadas a patentes municipales, permisos de circulación y multas. Las patentes municipales representaron $36.782 millones, mientras que los permisos de circulación alcanzaron $12.424 millones y las multas, $1.308 millones.</p>
-
-  <figure class="data-viz js-reveal" id="grafico-origen">
-    <div class="viz-kicker">Composición</div>
-    <h3>¿De dónde viene el aporte de Providencia al FCM?</h3>
-    <div class="viz-sub">Participación de los principales componentes informados</div>
-
-    <div class="donut-layout">
-      <div class="donut-box">
-        <svg viewBox="0 0 220 220" aria-label="Composición del aporte al FCM">
-          <circle class="donut-bg" cx="110" cy="110" r="78"></circle>
-          <circle class="donut-seg" id="seg1" cx="110" cy="110" r="78" stroke="#0867c8"></circle>
-          <circle class="donut-seg" id="seg2" cx="110" cy="110" r="78" stroke="#37a3ea"></circle>
-          <circle class="donut-seg" id="seg3" cx="110" cy="110" r="78" stroke="#d79d1e"></circle>
-        </svg>
-        <div class="donut-center">
-          <small>Aporte total</small>
-          <strong>$50.515</strong>
-        </div>
-      </div>
-
-      <div>
-        <div class="legend">
-          <div class="legend-item" data-index="0" data-label="Patentes municipales" data-value="$36.782 millones" data-pct="73,0%">
-            <span class="legend-dot" style="background:#0867c8"></span>
-            <span class="legend-name">Patentes municipales</span>
-            <span class="legend-value">$36.782</span>
-            <span class="legend-pct">73,0%</span>
-          </div>
-          <div class="legend-item" data-index="1" data-label="Permisos de circulación" data-value="$12.424 millones" data-pct="24,6%">
-            <span class="legend-dot" style="background:#37a3ea"></span>
-            <span class="legend-name">Permisos de circulación</span>
-            <span class="legend-value">$12.424</span>
-            <span class="legend-pct">24,6%</span>
-          </div>
-          <div class="legend-item" data-index="2" data-label="Multas" data-value="$1.308 millones" data-pct="2,6%">
-            <span class="legend-dot" style="background:#d79d1e"></span>
-            <span class="legend-name">Multas</span>
-            <span class="legend-value">$1.308</span>
-            <span class="legend-pct">2,6%</span>
-          </div>
-        </div>
-        <div class="donut-detail" id="donutDetail">Pasa el mouse o toca una categoría para ver el detalle.</div>
-      </div>
-    </div>
-    <figcaption class="viz-source">Fuente: antecedentes presupuestarios citados en el reportaje.</figcaption>
-  </figure>
-
-  <p>La magnitud del aporte también se encuentra respaldada por la Cuenta Pública 2022 de Providencia, que registra una participación de $51.143 millones en el Fondo Común Municipal. El mismo documento señala que las comunas de Santiago, Las Condes, Vitacura y Providencia están obligadas legalmente a realizar un mayor aporte al FCM.</p>
-
-  <div class="fund-explainer js-reveal" aria-label="Claves para leer el Fondo Común Municipal">
-    <div class="fund-item"><button class="fund-button" type="button" aria-expanded="false"><span>¿Qué muestra esta comparación?</span><span>+</span></button><div class="fund-panel">Dimensiona la escala del aporte de Providencia frente al presupuesto total de Recoleta durante 2022.</div></div>
-    <div class="fund-item"><button class="fund-button" type="button" aria-expanded="false"><span>¿Qué no permite concluir?</span><span>+</span></button><div class="fund-panel">No significa que ambos presupuestos tengan las mismas funciones, fuentes de financiamiento o estructura de gastos.</div></div>
-    <div class="fund-item"><button class="fund-button" type="button" aria-expanded="false"><span>¿Por qué Providencia aporta más?</span><span>+</span></button><div class="fund-panel">La Cuenta Pública 2022 señala que Santiago, Las Condes, Vitacura y Providencia están obligadas legalmente a realizar un mayor aporte al FCM.</div></div>
-  </div>
-
-  <div class="chapter-break"><div class="story-kicker">04 / Recursos por habitante</div><h2>Una brecha que también se observa por habitante</h2></div>
-
-  <p>La diferencia entre ambas comunas no se limita al tamaño de sus presupuestos. Al relacionar los recursos municipales disponibles con la población de cada territorio, la distancia también resulta significativa.</p>
-
-  <p>Durante 2022, Providencia contó con un presupuesto vigente de $174.795 millones para una población aproximada de 147.000 habitantes, equivalente a unos $1.189.000 por vecino.</p>
-
-  <p>Recoleta, en cambio, contó con un presupuesto municipal de $43.314 millones para cerca de 158.000 habitantes, lo que representa aproximadamente $274.100 por habitante.</p>
-
-  <p>El cruce de ambos datos arroja una diferencia de entre 4,3 y 4,4 veces en los recursos municipales disponibles por habitante.</p>
-
-  <p>La comparación debe entenderse dentro de las diferencias de población y de estructura de ingresos de ambas comunas. Como referencia, las proyecciones de población del INE utilizadas por la Biblioteca del Congreso Nacional sitúan para 2022 a Providencia en 161.568 habitantes y a Recoleta en 195.185.</p>
-
-  <figure class="data-viz js-reveal lollipop" id="grafico-percapita">
-    <div class="viz-kicker">Brecha por habitante</div>
-    <h3>Presupuesto municipal disponible por habitante</h3>
-    <div class="viz-sub">Pesos por habitante · 2022</div>
-
-    <div class="scale">
-      <div class="gridline" style="left:10%"></div>
-      <div class="gridline" style="left:32.5%"></div>
-      <div class="gridline" style="left:55%"></div>
-      <div class="gridline" style="left:77.5%"></div>
-      <div class="gridline" style="left:100%"></div>
-
-      <span class="tick" style="left:10%">0</span>
-      <span class="tick" style="left:32.5%">300 mil</span>
-      <span class="tick" style="left:55%">600 mil</span>
-      <span class="tick" style="left:77.5%">900 mil</span>
-      <span class="tick" style="left:100%">1,2 mill.</span>
-
-      <div class="lolli-row p">
-        <div class="lolli-label prov">Providencia</div>
-        <div class="lolli-line p" id="lineP"></div>
-        <div class="lolli-dot p" id="dotP"></div>
-        <div class="lolli-value prov" id="valP">$1.189.000</div>
-      </div>
-
-      <div class="lolli-row r">
-        <div class="lolli-label rec">Recoleta</div>
-        <div class="lolli-line r" id="lineR"></div>
-        <div class="lolli-dot r" id="dotR"></div>
-        <div class="lolli-value rec" id="valR">$274.100</div>
-      </div>
-    </div>
-
-    <div class="ratio-note">
-      <span>Brecha aproximada</span>
-      <strong>4,34 veces</strong>
-    </div>
-
-    <figcaption class="viz-source">Fuente: datos utilizados en el reportaje.</figcaption>
-  </figure>
-
-  <div class="chapter-break"><div class="story-kicker">05 / Educación</div><h2>Educación: otro punto de contraste financiero</h2></div>
-
-  <p>Las diferencias también aparecen al observar específicamente el área de educación de Recoleta.</p>
-
-  <p>Al comenzar 2022, el área registró un saldo inicial de caja negativo de $3.308 millones. Después de la primera modificación presupuestaria, el déficit de arrastre quedó en -$2.055 millones y se mantuvo durante el resto del ejercicio.</p>
-
-  <figure class="data-viz js-reveal" id="grafico-educacion">
-    <div class="viz-kicker">Educación · Recoleta</div>
-    <h3>Déficit de arrastre durante 2022</h3>
-    <div class="viz-sub">Saldo inicial de caja y saldo tras la primera modificación presupuestaria</div>
-
-    <div class="education-grid">
-      <div class="edu-card">
-        <div>
-          <div class="edu-label">Inicio del año</div>
-          <div class="edu-number" data-counter="-3308">-$3.308 millones</div>
-          <div class="edu-sub">Saldo inicial de caja negativo.</div>
-        </div>
-        <div class="edu-track"><div class="edu-fill" data-w="100"></div></div>
-      </div>
-
-      <div class="edu-card">
-        <div>
-          <div class="edu-label">Tras primera modificación</div>
-          <div class="edu-number" data-counter="-2055">-$2.055 millones</div>
-          <div class="edu-sub">Déficit de arrastre que se mantuvo durante el resto del ejercicio.</div>
-        </div>
-        <div class="edu-track"><div class="edu-fill" data-w="62.1"></div></div>
-      </div>
-    </div>
-
-    <div class="edu-summary">
-      El déficit se redujo en aproximadamente <strong>$1.253 millones</strong>, pero el área continuó con saldo negativo durante el ejercicio.
-    </div>
-
-    <figcaption class="viz-source">Fuente: cifras consignadas en el reportaje.</figcaption>
-  </figure>
-
-  <p>Esto significa que el área de Educación de Recoleta inició el período presupuestario con una situación financiera negativa que condicionó la administración de sus recursos durante el año. El municipio debió enfrentar este escenario mientras sostenía el funcionamiento de sus establecimientos educacionales, junto con compromisos financieros y obligaciones con proveedores.</p>
-
-  <p>En el caso de Providencia, el escenario financiero municipal era considerablemente distinto. La Cuenta Pública 2022 registra ingresos municipales totales por $179.542 millones y señala que, después de considerar los compromisos correspondientes al Fondo Común Municipal, educación, salud y otros conceptos, quedaron $104.087 millones disponibles para la gestión municipal.</p>
-
-  <p>La misma Cuenta Pública registra además un aporte directo al Fondo Común Municipal de $51.143 millones y un aporte municipal a Salud y Educación de $10.747 millones.</p>
-
-  <p>El contraste entre ambos municipios no implica que sus presupuestos tengan exactamente las mismas funciones, fuentes de financiamiento o estructura de gastos. Sin embargo, las cifras permiten dimensionar la diferencia de recursos con los que ambas municipalidades enfrentaron sus responsabilidades durante 2022.</p>
-
-  <p>En un sistema en que el Fondo Común Municipal busca redistribuir recursos entre las municipalidades, Providencia se encuentra entre las comunas que realizan mayores aportes al mecanismo. La propia municipalidad explica que la legislación obliga a determinados municipios a realizar un aporte mayor al fondo.</p>
-
-  <p>El cruce de los datos muestra así una diferencia que trasciende una cifra presupuestaria aislada: mientras Providencia pudo destinar decenas de miles de millones de pesos al mecanismo de redistribución municipal y mantener recursos disponibles para su gestión, Recoleta administró un presupuesto total inferior al aporte que Providencia realizó al mismo fondo y, además, enfrentó un déficit de arrastre en su área de Educación.</p>
-
-  <p>Los datos de 2022 permiten observar, de esta manera, cómo dos comunas próximas pueden enfrentar condiciones fiscales muy diferentes. La distancia geográfica entre ambas es reducida, pero la diferencia en los recursos municipales disponibles constituye una brecha considerable al momento de financiar el bienestar de todos los habitantes de una comuna.</p>
-
-  <section class="reading-check js-reveal" id="interpretacion">
-    <div class="story-kicker" style="color:#ff777a">06 / Comprueba tu lectura</div>
-    <h2>¿Qué permite afirmar la comparación principal?</h2>
-    <p>Selecciona la interpretación respaldada por los datos presentados.</p>
-    <div class="quiz-options"><button class="quiz-option" type="button" data-answer="bad">Que ambos montos cumplen exactamente las mismas funciones.</button><button class="quiz-option" type="button" data-answer="good">Que el aporte de Providencia al FCM superó el presupuesto total de Recoleta en 2022.</button><button class="quiz-option" type="button" data-answer="bad">Que la diferencia se mantuvo idéntica en todos los años.</button></div>
-    <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
-  </section>
-
-  <figure class="photo-credit-block js-reveal">
-    <img src="providencia-desde-cerro-san-cristobal.jpg?v=20261014" alt="Vista de Providencia desde la cumbre del Cerro San Cristóbal">
-    <p>Vista de Providencia desde el Cerro San Cristóbal. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cerro_San_Cristobal_-_Vistas_desde_Cumbre_-_Providencia_-_05.jpg" target="_blank" rel="noopener noreferrer">José Joaquín Cortes / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Imagen redimensionada para publicación web.</p>
-  </figure>
+  <section class="story-band conclusion-band" id="conclusiones"><div class="story-shell">
+    <div class="chapter-heading"><div class="chapter-index">06</div><div><div class="story-kicker">Conclusiones</div><h2 class="story-title">Una brecha fiscal que atraviesa la gestión municipal.</h2><p>Las cifras permiten dimensionar diferencias, sin confundir el propósito ni la estructura de cada presupuesto.</p></div></div>
+    <div class="copy-grid"><div><p>El contraste entre ambos municipios no implica que sus presupuestos tengan exactamente las mismas funciones, fuentes de financiamiento o estructura de gastos. Sin embargo, las cifras permiten dimensionar la diferencia de recursos con los que ambas municipalidades enfrentaron sus responsabilidades durante 2022.</p><p>En un sistema en que el Fondo Común Municipal busca redistribuir recursos entre las municipalidades, Providencia se encuentra entre las comunas que realizan mayores aportes al mecanismo. La propia municipalidad explica que la legislación obliga a determinados municipios a realizar un aporte mayor al fondo.</p></div><div><p>El cruce de los datos muestra así una diferencia que trasciende una cifra presupuestaria aislada: mientras Providencia pudo destinar decenas de miles de millones de pesos al mecanismo de redistribución municipal y mantener recursos disponibles para su gestión, Recoleta administró un presupuesto total inferior al aporte que Providencia realizó al mismo fondo y, además, enfrentó un déficit de arrastre en su área de Educación.</p><p>Los datos de 2022 permiten observar, de esta manera, cómo dos comunas próximas pueden enfrentar condiciones fiscales muy diferentes. La distancia geográfica entre ambas es reducida, pero la diferencia en los recursos municipales disponibles constituye una brecha considerable al momento de financiar el bienestar de todos los habitantes de una comuna.</p></div></div>
+    <div class="closing-layout"><section class="reading-check js-reveal" id="interpretacion"><div class="story-kicker">Comprueba tu lectura</div><h2>¿Qué permite afirmar la comparación principal?</h2><p>Selecciona la interpretación respaldada por los datos presentados.</p><div class="quiz-options"><button class="quiz-option" type="button" data-answer="bad">Que ambos montos cumplen exactamente las mismas funciones.</button><button class="quiz-option" type="button" data-answer="good">Que el aporte de Providencia al FCM superó el presupuesto total de Recoleta en 2022.</button><button class="quiz-option" type="button" data-answer="bad">Que la diferencia se mantuvo idéntica en todos los años.</button></div><div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div></section><figure class="photo-credit-block js-reveal"><img src="providencia-desde-cerro-san-cristobal.jpg?v=20261014" alt="Vista de Providencia desde la cumbre del Cerro San Cristóbal"><p>Vista de Providencia desde el Cerro San Cristóbal. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cerro_San_Cristobal_-_Vistas_desde_Cumbre_-_Providencia_-_05.jpg" target="_blank" rel="noopener noreferrer">José Joaquín Cortes / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Imagen redimensionada para publicación web.</p></figure></div>
+  </div></section>
 </article>
 
 
@@ -859,7 +674,8 @@ footer p {
       var target=Number(counter.dataset.counter),start=performance.now(),duration=1000;
       function frame(now){
         var progress=Math.min(1,(now-start)/duration),ease=1-Math.pow(1-progress,3);
-        counter.textContent="$"+Math.round(target*ease).toLocaleString("es-CL");
+        var current=Math.round(target*ease);
+        counter.textContent=counter.classList.contains("edu-number")?(current<0?"-$":"$")+Math.abs(current).toLocaleString("es-CL")+" millones":"$"+current.toLocaleString("es-CL");
         if(progress<1) requestAnimationFrame(frame);
       }
       requestAnimationFrame(frame);
@@ -940,6 +756,11 @@ footer p {
   }
 
   function initInteractions(){
+    function syncHeader(){
+      var header=q("header");
+      if(header) document.documentElement.style.setProperty("--header-height",header.offsetHeight+"px");
+    }
+    syncHeader();
     function updateProgress(){
       var max=document.documentElement.scrollHeight-window.innerHeight;
       q("#reading-progress").style.width=(max>0?Math.min(100,window.scrollY/max*100):0)+"%";
@@ -965,6 +786,49 @@ footer p {
       button.addEventListener("click",function(){
         var item=button.parentElement,open=item.classList.toggle("open");
         button.setAttribute("aria-expanded",String(open));
+      });
+    });
+
+    qa(".chapter-nav a").forEach(function(link){
+      link.addEventListener("click",function(){
+        qa(".chapter-nav a").forEach(function(item){ item.removeAttribute("aria-current"); });
+        link.setAttribute("aria-current","location");
+      });
+    });
+
+    var compareData={
+      informado:{amount:"$50.515",label:"Aporte informado al FCM",gap:"+$7.201",scale:"1"},
+      ejecutado:{amount:"$50.014",label:"Ejecución real de Providencia",gap:"+$6.700",scale:".995"}
+    };
+    qa("[data-compare]").forEach(function(button){
+      button.addEventListener("click",function(){
+        var data=compareData[button.dataset.compare];
+        qa("[data-compare]").forEach(function(item){ item.setAttribute("aria-pressed",String(item===button)); });
+        q("#prov-amount").textContent=data.amount;
+        q("#prov-label").textContent=data.label;
+        q("#budget-gap").textContent=data.gap;
+        q("#prov-orb").style.setProperty("--prov-scale",data.scale);
+      });
+    });
+
+    qa("[data-focus]").forEach(function(button){
+      button.addEventListener("click",function(){
+        var chart=q("#grafico-percapita");
+        qa("[data-focus]").forEach(function(item){ item.setAttribute("aria-pressed",String(item===button)); });
+        chart.classList.remove("focus-providencia","focus-recoleta");
+        if(button.dataset.focus!=="ambas") chart.classList.add("focus-"+button.dataset.focus);
+      });
+    });
+
+    var educationCopy={
+      inicio:"El área comenzó 2022 con un saldo inicial de caja negativo de <strong>$3.308 millones</strong>.",
+      despues:"Tras la primera modificación presupuestaria, el déficit de arrastre quedó en <strong>-$2.055 millones</strong> y se mantuvo durante el resto del ejercicio."
+    };
+    qa("[data-edu]").forEach(function(button){
+      button.addEventListener("click",function(){
+        qa("[data-edu]").forEach(function(item){ item.setAttribute("aria-pressed",String(item===button)); });
+        q(".education-grid").dataset.focus=button.dataset.edu;
+        q("#edu-summary").innerHTML=educationCopy[button.dataset.edu];
       });
     });
 
@@ -997,6 +861,16 @@ footer p {
       },{threshold:0.2,rootMargin:"0px 0px -8% 0px"});
 
       qa(".js-reveal").forEach(function(el){ observer.observe(el); });
+
+      var navObserver=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(!entry.isIntersecting) return;
+          qa(".chapter-nav a").forEach(function(link){ link.removeAttribute("aria-current"); });
+          var active=q('.chapter-nav a[href="#'+entry.target.id+'"]');
+          if(active) active.setAttribute("aria-current","location");
+        });
+      },{threshold:.2,rootMargin:"-30% 0px -55% 0px"});
+      qa(".story-band[id]").forEach(function(section){ navObserver.observe(section); });
     }else{
       qa(".js-reveal").forEach(runChart);
     }
@@ -1010,6 +884,7 @@ footer p {
     },300);
 
     window.addEventListener("resize",function(){
+      syncHeader();
       if(q("#grafico-percapita") && q("#grafico-percapita").dataset.played==="1"){
         animateLollipop();
       }
