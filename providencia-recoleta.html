@@ -526,13 +526,16 @@ footer {
 
 /* ========= EXPERIENCIA MULTIMEDIA ========= */
 .reading-progress{position:fixed;left:0;top:0;height:4px;width:0;background:#fff;z-index:1300;box-shadow:0 0 0 1px rgba(192,17,19,.2)}
-.feature-hero{color:#16191d;background:#fff}
-.feature-inner,.feature-wide{margin-inline:auto}.feature-wide{width:min(1180px,calc(100% - 40px))}.feature-inner{width:min(1040px,calc(100% - 40px));padding:38px 0 26px}
-.feature-eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#c01113;margin-bottom:14px}
-.feature-hero h1{font-size:clamp(40px,5.5vw,72px);line-height:.98;letter-spacing:0;margin:0;max-width:940px;font-weight:850;text-wrap:balance}
-.feature-hero h1 em{font-style:normal;color:#c01113}.feature-deck{font-size:clamp(18px,2.1vw,25px);line-height:1.42;max-width:840px;margin:18px 0 0;color:#49515a;font-weight:500}
-.feature-meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:18px;font-size:13px;color:#66707a}.feature-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;background:#c01113;color:#fff;text-decoration:none;font-weight:800;border:1px solid #c01113}
-.lead-photo{width:min(960px,100%);margin:32px auto 0;background:transparent;color:#66707a}.lead-photo img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center 42%;border-radius:6px}.lead-photo figcaption{margin:0;padding:10px 2px 0;font-size:11px;line-height:1.45;color:#66707a}.lead-photo a{color:#8f0d0f}
+.feature-hero{position:relative;isolation:isolate;color:#fff;background:radial-gradient(ellipse at 78% 34%,rgba(46,116,154,.38),transparent 46%),linear-gradient(128deg,#071725,#12334a 70%,#491923);min-height:650px;overflow:hidden;display:flex;align-items:center}
+.feature-hero:before{content:"";position:absolute;inset:0;z-index:-2;opacity:.28;background:url('providencia-desde-cerro-san-cristobal.jpg?v=20261014') right 38%/cover no-repeat}
+.feature-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#071827 0%,rgba(7,24,39,.94) 43%,rgba(7,24,39,.48) 100%)}
+.feature-inner,.feature-wide{width:min(1180px,calc(100% - 40px));margin-inline:auto}.feature-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:52px;align-items:center;padding:76px 0 88px;position:relative}
+.feature-eyebrow{font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.12em;color:#ffc8a8;margin-bottom:18px}
+.feature-hero h1{font-size:clamp(42px,5.4vw,78px);line-height:1.01;letter-spacing:0;margin:0;max-width:900px;font-weight:900;text-wrap:balance}
+.feature-hero h1 em{font-style:normal;color:#ff858a}.feature-deck{font-size:clamp(17px,1.8vw,22px);line-height:1.55;max-width:760px;margin:24px 0 0;color:#e9edf3;font-weight:500}
+.feature-meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:27px;font-size:12px;color:#c8d1da}.feature-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 19px;background:#e95660;color:#fff;text-decoration:none;font-weight:800;border:0;border-radius:999px}
+.feature-stat{justify-self:end;align-self:end;width:min(100%,340px);border:1px solid rgba(255,255,255,.36);background:rgba(7,26,43,.76);backdrop-filter:blur(7px);padding:28px;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.28)}.feature-stat strong{display:block;font-size:clamp(66px,8vw,106px);line-height:.95;font-weight:950;color:#ffa3a8;letter-spacing:0}.feature-stat span{display:block;margin-top:10px;color:#eef0f4;font-weight:750;line-height:1.42}.feature-stat small{display:block;margin-top:12px;color:#c3d1e0;font-size:11px;line-height:1.5}.feature-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.12em;color:#d3dce3;text-transform:uppercase;white-space:nowrap}
+.lead-photo{width:min(1180px,calc(100% - 40px));margin:36px auto 54px;background:transparent;color:#66707a}.lead-photo img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center 42%;border-radius:16px}.lead-photo figcaption{margin:10px 0 0;font-size:12px;line-height:1.6;color:#66707a}.lead-photo a{color:#8f0d0f;font-weight:700}
 .chapter-nav{position:sticky;top:130px;z-index:900;background:rgba(255,255,255,.96);border-bottom:1px solid #dfe4e8;backdrop-filter:blur(10px);overflow:auto}.chapter-nav .feature-wide{display:flex;gap:4px;padding:8px 0;min-width:max-content}.chapter-nav a{text-decoration:none;padding:9px 12px;font-size:12px;font-weight:800;color:#3d4650;border-bottom:2px solid transparent}.chapter-nav a:hover,.chapter-nav a:focus-visible{color:#c01113;border-color:#c01113}
 .article{margin-top:58px;box-shadow:none;border:0;padding-top:12px}.story-kicker{font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#c01113;margin-bottom:12px}.story-title{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:0;margin:0 0 28px;text-wrap:balance}
 .kpi-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dfe4e8;border-bottom:1px solid #dfe4e8;margin:42px 0}.kpi{padding:26px 22px;border-right:1px solid #dfe4e8}.kpi:last-child{border-right:0}.kpi small{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:800;color:#66707a}.kpi strong{display:block;font-size:clamp(31px,4vw,52px);line-height:1;margin:10px 0 8px;letter-spacing:0}.kpi span{display:block;color:#66707a;font-size:13px;line-height:1.4}.kpi.prov strong{color:#0867c8}.kpi.rec strong{color:#d9363e}.kpi.gold strong{color:#8b670e}
@@ -554,7 +557,7 @@ footer p {
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 15px; text-align: center; }
     header .logo img { height: 75px; margin: 0 auto; }
-    .chapter-nav{top:126px}.feature-inner,.feature-wide{width:min(100% - 28px,1180px)}.feature-inner{padding:28px 0 24px}.lead-photo{margin-top:24px}.lead-photo img{object-position:center 40%;border-radius:4px}.lead-photo figcaption{padding-top:9px}.kpi-strip{grid-template-columns:1fr}.kpi{border-right:0;border-bottom:1px solid #dfe4e8}.kpi:last-child{border-bottom:0}.context-map{grid-template-columns:1fr}.map-stage,.map-stage svg{min-height:320px}.data-viz{padding:22px 16px}
+    .chapter-nav{top:126px}.feature-inner,.feature-wide,.lead-photo{width:min(100% - 28px,1180px)}.feature-hero{min-height:0}.feature-inner{grid-template-columns:1fr;gap:24px;padding:55px 0 70px}.feature-hero h1{font-size:clamp(39px,10vw,62px);line-height:1.02}.feature-stat{justify-self:start;align-self:auto;padding:20px}.feature-stat strong{font-size:68px}.lead-photo{margin:24px auto 42px}.lead-photo img{object-position:center 40%;border-radius:10px}.kpi-strip{grid-template-columns:1fr}.kpi{border-right:0;border-bottom:1px solid #dfe4e8}.kpi:last-child{border-bottom:0}.context-map{grid-template-columns:1fr}.map-stage,.map-stage svg{min-height:320px}.data-viz{padding:22px 16px}
 }
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.js-reveal{opacity:1;transform:none;transition:none}}
@@ -582,16 +585,20 @@ footer p {
 
 <section class="feature-hero" aria-labelledby="feature-title">
   <div class="feature-inner">
-    <div class="feature-eyebrow">TDI Noticias / Especial multimedia / Finanzas municipales</div>
-    <h1 id="feature-title">Providencia aporta al Fondo Común Municipal <em>más que todo el presupuesto anual de Recoleta</em></h1>
-    <p class="feature-deck">El contraste entre ambas comunas revela una diferencia significativa en la disponibilidad de recursos municipales. En 2022, el aporte de Providencia al Fondo Común Municipal superó el presupuesto completo de Recoleta, mientras que la brecha de recursos por habitante alcanzó más de cuatro veces.</p>
-    <figure class="lead-photo">
-      <img src="recoleta-desde-cerro-san-cristobal.jpg?v=20261014" alt="Vista de la comuna de Recoleta desde la cumbre del Cerro San Cristóbal">
-      <figcaption>Vista de Recoleta y Santiago Centro desde el Cerro San Cristóbal. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cerro_San_Cristobal_-_Vistas_desde_Cumbre_-_Recoleta_-_01.jpg" target="_blank" rel="noopener noreferrer">José Joaquín Cortes / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Imagen redimensionada para publicación web.</figcaption>
-    </figure>
-    <div class="feature-meta"><a class="feature-cta" href="#contexto">Explorar los datos</a><span>Cifras de 2022 · lectura interactiva</span></div>
+    <div><div class="feature-eyebrow">TDI Noticias / Especial multimedia / Finanzas municipales</div>
+      <h1 id="feature-title">Providencia aporta al Fondo Común Municipal <em>más que todo el presupuesto anual de Recoleta</em></h1>
+      <p class="feature-deck">El contraste entre ambas comunas revela una diferencia significativa en la disponibilidad de recursos municipales. En 2022, el aporte de Providencia al Fondo Común Municipal superó el presupuesto completo de Recoleta, mientras que la brecha de recursos por habitante alcanzó más de cuatro veces.</p>
+      <div class="feature-meta"><a class="feature-cta" href="#contexto">Explorar los datos ↓</a><span>Cifras de 2022 · lectura interactiva</span></div>
+    </div>
+    <aside class="feature-stat" aria-label="Brecha de recursos municipales disponibles por habitante"><strong>4,34×</strong><span>más recursos municipales disponibles por habitante en Providencia.</span><small>Comparación aproximada construida con las cifras de 2022 presentadas en el reportaje.</small></aside>
   </div>
+  <div class="feature-scroll">Desliza para explorar ↓</div>
 </section>
+
+<figure class="lead-photo">
+  <img src="recoleta-desde-cerro-san-cristobal.jpg?v=20261014" alt="Vista de la comuna de Recoleta desde la cumbre del Cerro San Cristóbal">
+  <figcaption>Vista de Recoleta y Santiago Centro desde el Cerro San Cristóbal. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cerro_San_Cristobal_-_Vistas_desde_Cumbre_-_Recoleta_-_01.jpg" target="_blank" rel="noopener noreferrer">José Joaquín Cortes / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Imagen redimensionada para publicación web.</figcaption>
+</figure>
 
 <nav class="chapter-nav" aria-label="Capítulos del reportaje"><div class="feature-wide">
   <a href="#contexto">01 Contexto</a><a href="#grafico-fcm">02 Magnitud</a><a href="#grafico-origen">03 Fondo Común</a><a href="#grafico-percapita">04 Por habitante</a><a href="#grafico-educacion">05 Educación</a><a href="#interpretacion">06 Interpretación</a>
