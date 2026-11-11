@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="Reportaje de TDI Noticias: lo que separa la vida en Recoleta y Providencia en vivienda, transporte, áreas verdes, educación y salud.">
 <title>La desigualdad social tiene territorio: lo que separa la vida en Recoleta y Providencia | TDI Noticias</title>
 
@@ -22,7 +22,7 @@ type="image/png">
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 body {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -30,7 +30,11 @@ body {
   background-color: #f4f7f6;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
+
+img { max-width: 100%; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -156,6 +160,8 @@ nav a:focus-visible,
 }
 
 .btn {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   font: inherit;
   font-weight: 700;
   font-size: .9rem;
@@ -191,7 +197,14 @@ nav a:focus-visible,
 
 .speed {
   font: inherit;
-  font-size: .9rem;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--primary) 50%), linear-gradient(135deg, var(--primary) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 55%, calc(100% - 12px) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 34px !important;
   font-weight: 700;
   min-height: 44px;
   border-radius: 999px;
@@ -281,6 +294,8 @@ nav a:focus-visible,
   padding: 34px 5% 30px;
   font-size: var(--fs, 1.125rem);
 }
+
+.story { overflow-wrap: break-word; }
 
 .story p {
   font-size: 1em;
@@ -477,20 +492,69 @@ body.hc .sub-section { background: #000 !important; }
 
 /* --- Responsive --- */
 
-@media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; gap: 26px; padding-top: 30px; }
-  .hero img { aspect-ratio: 4 / 3; max-height: 420px; }
+/* Pantallas grandes (monitores, Mac/Windows de escritorio) */
+@media (min-width: 1500px) {
+  .story { max-width: 800px; }
+  .hero, .a11y-inner { max-width: 1280px; }
 }
 
+/* Tablets (horizontal y vertical) y laptops pequeñas: título arriba, imagen debajo */
+@media (max-width: 1280px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
+  .hero figure { max-width: 820px; }
+  .hero img { aspect-ratio: 16 / 9; max-height: none; object-position: center 45%; }
+  nav ul { gap: 16px; }
+}
+
+/* Tablets en vertical */
+@media (max-width: 860px) {
+  .hero { gap: 26px; padding-top: 30px; }
+  .hero img { aspect-ratio: 4 / 3; max-height: 440px; }
+  .story { padding-top: 22px; }
+}
+
+/* Celulares y tablets pequeñas */
 @media (max-width: 768px) {
-  header { flex-direction: column; gap: 15px; text-align: center; }
+  header { flex-direction: column; gap: 12px; text-align: center; position: static; }
   header .logo img { height: 75px; margin: 0 auto; }
-  nav ul { justify-content: center; }
+  nav ul { justify-content: center; gap: 10px 18px; }
   .footer-app-container iframe { height: 680px !important; }
   .footer-content { flex-direction: column; text-align: center; }
+  .footer-section { min-width: 0; }
   .footer-section h3 { display: block; border-bottom: none; }
   .footer-section a { justify-content: center; }
   .a11y-sep { display: none; }
+  .a11y-inner { padding: 10px 16px; gap: 8px; }
+  .a11y-title { flex-basis: 100%; }
+  .hero, .story, .refs { padding-left: 18px; padding-right: 18px; }
+  .story h2 { padding-left: 12px; }
+}
+
+/* Celulares pequeños: el reproductor flotante pasa a ocupar el ancho,
+   sobre el botón de subir, para que nunca se superpongan */
+@media (max-width: 520px) {
+  .a11y-group { width: 100%; }
+  #btn-listen { flex: 1 1 100%; }
+  .tts-float { left: 12px; right: 12px; bottom: 82px; justify-content: center; }
+  .tts-float .btn { flex: 1; }
+  .to-top { right: 14px; bottom: 14px; width: 52px; height: 52px; }
+  .hero img { aspect-ratio: 1 / 1; max-height: 340px; }
+  .hero h1 { letter-spacing: -.01em; }
+  .story p.quote { padding-left: 14px; }
+}
+
+/* Celulares en horizontal (poca altura) */
+@media (max-height: 520px) {
+  header { position: static; }
+  header .logo img { height: 64px; }
+}
+
+/* Impresión: solo la noticia */
+@media print {
+  .skip-link, .a11y-bar, .to-top, .tts-float, .sub-section, footer, nav { display: none !important; }
+  header { position: static; box-shadow: none; }
+  body { background: #fff; }
+  .hero { padding-top: 10px; }
 }
 </style>
 </head>
@@ -926,6 +990,7 @@ Todos los derechos reservados.
   }
 
   function start() {
+    var wasActive = state !== 'idle';
     synth.cancel();
     token++;
     rate = parseFloat(speed.value) || 1;
@@ -934,7 +999,8 @@ Todos los derechos reservados.
     ui();
     announce('Lectura iniciada');
     var t = token;
-    setTimeout(function () { if (t === token) speakAt(0); }, 80);
+    if (wasActive) setTimeout(function () { if (t === token) speakAt(0); }, 80);
+    else speakAt(0);   // dentro del gesto del usuario (requerido por iPhone/Safari)
   }
 
   function pause() {
@@ -953,8 +1019,7 @@ Todos los derechos reservados.
     state = 'playing';
     ui();
     announce('Lectura reanudada');
-    var t = token;
-    setTimeout(function () { if (t === token) speakAt(pos); }, 60);
+    speakAt(pos);
   }
 
   function stop() {
